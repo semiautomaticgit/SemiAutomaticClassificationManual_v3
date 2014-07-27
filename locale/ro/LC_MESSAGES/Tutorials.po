@@ -1,0 +1,712 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-27 23:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../Tutorials.rst:5
+msgid "Tutorials"
+msgstr ""
+
+#: ../../Tutorials.rst:11
+msgid ""
+"The following is a basic tutorial about the use of the Semi-Automatic "
+"Classification Plugin. Using a semi-automatic approach we are going to "
+"rapidly classify a Landsat 8 image and estimate land cover area, in only six"
+" phases."
+msgstr ""
+
+#: ../../Tutorials.rst:14
+msgid ""
+"**Download** the `sample dataset "
+"<https://docs.google.com/uc?id=0BysUrKXWIDwBNDUxSGZlRGpBYm8&export=download>`_,"
+" which is a subset of a Landsat 8 image acquired over Rome, Italy on June "
+"12, 2014 (data available from the U.S. Geological Survey). The zip file can "
+"be extracted with any file archiver software (for instance the open source "
+"`7-zip <http://www.7-zip.org/>`_)."
+msgstr ""
+
+#: ../../Tutorials.rst:16
+msgid ""
+"The dataset includes the metadata file (MTL.txt) and the following **Landsat"
+" 8 bands** (16 bit raster) :"
+msgstr ""
+
+#: ../../Tutorials.rst:18
+msgid "Band 2 = Blue;"
+msgstr ""
+
+#: ../../Tutorials.rst:20
+msgid "Band 3 = Green;"
+msgstr ""
+
+#: ../../Tutorials.rst:22
+msgid "Band 4 = Red;"
+msgstr ""
+
+#: ../../Tutorials.rst:24
+msgid "Band 5 = Near-Infrared;"
+msgstr ""
+
+#: ../../Tutorials.rst:26
+msgid "Band 6 = Short Wavelength Infrared 1;"
+msgstr ""
+
+#: ../../Tutorials.rst:28
+msgid "Band 7 = Short Wavelength Infrared 2."
+msgstr ""
+
+#: ../../Tutorials.rst:30
+msgid ""
+"The objective of this tutorial is to classify the following **land cover "
+"classes**:"
+msgstr ""
+
+#: ../../Tutorials.rst:32
+msgid "Class 1 = Water (e.g. surface water);"
+msgstr ""
+
+#: ../../Tutorials.rst:34
+msgid "Class 2 = Vegetation (e.g. grassland or trees);"
+msgstr ""
+
+#: ../../Tutorials.rst:36
+msgid "Class 3 = Built-up (e.g. artificial areas, buildings and asphalt);"
+msgstr ""
+
+#: ../../Tutorials.rst:38
+msgid "Class 4 = Bare soil (e.g. soil without vegetation)."
+msgstr ""
+
+#: ../../Tutorials.rst:40
+msgid ""
+"Following, the tutorial phases are illustrated along with a brief "
+"description thereof."
+msgstr ""
+
+#: ../../Tutorials.rst:45
+msgid "Pre processing: Conversion of raster bands from DN to Reflectance"
+msgstr ""
+
+#: ../../Tutorials.rst:47
+msgid ""
+"The pre processing phase is required before the actual image processing in "
+"order to improve the classification results. SCP allows for the automated "
+"conversion of Landsat DN (i.e. Digital Numbers) to the physical measure of "
+"**Top Of Atmosphere reflectance** (TOA, see :ref:`basic_definitions`). Also,"
+" SCP implements an image-based **atmospheric correction** using the **DOS1 "
+"method** (Dark Object Subtraction 1) as described in "
+":ref:`landsat_conversion_to_reflectance`. In addition, we are going to "
+"create a **color composite** of the image. In particular, the composite RGB "
+"= 543 (that is the equivalent of RGB = 432 for Landsat 7) is useful for the "
+"interpretation of the image because vegetation pixels appear red (healthy "
+"vegetation reflects a large part of the incident light in the near-infrared "
+"wavelength, resulting in higher reflectance values for band 5, thus higher "
+"values for the associated color red)."
+msgstr ""
+
+#: ../../Tutorials.rst:51 ../../Tutorials.rst:86 ../../Tutorials.rst:124
+#: ../../Tutorials.rst:194 ../../Tutorials.rst:220 ../../Tutorials.rst:272
+msgid "Steps:"
+msgstr ""
+
+#: ../../Tutorials.rst:53
+msgid "Open QGIS and start the Semi-Automatic Classification Plugin;"
+msgstr ""
+
+#: ../../Tutorials.rst:55
+msgid "Select the :ref:`pre_processing_tab` > :ref:`landsat_tab`;"
+msgstr ""
+
+#: ../../Tutorials.rst:59 ../../Tutorials.rst:92 ../../Tutorials.rst:226
+#: ../../Tutorials.rst:278
+msgid "|br|"
+msgstr ""
+
+#: ../../Tutorials.rst:63
+msgid ""
+"Select the directory that contains the Landsat bands (and also the required "
+"metafile MTL.txt), and select the output directory where converted bands are"
+" saved;"
+msgstr ""
+
+#: ../../Tutorials.rst:65
+msgid ""
+"Check the option ``Apply DOS1 atmospheric correction``, and click ``Perform "
+"conversion`` to convert Landsat bands to reflectance (leaving checked "
+"``Create Virtual Raster``);"
+msgstr ""
+
+#: ../../Tutorials.rst:69
+msgid ""
+"At the end of the process, converted bands are loaded in QGIS. Also, a "
+"virtual raster named ``landsat.vrt`` is loaded (containing all the Landsat "
+"bands converted to reflectance), which is useful for the creation of color "
+"composites;"
+msgstr ""
+
+#: ../../Tutorials.rst:71
+msgid ""
+"Select the Landsat virtual raster, left click and open its properties; in "
+"``Style`` select band 4 (i.e. Near-Infrared) for the red band, band 3 (i.e. "
+"Red) for the green band, and band 2 (i.e. Green) for the blue band."
+msgstr ""
+
+#: ../../Tutorials.rst:75
+msgid "The result of the color composite is shown in the following image."
+msgstr ""
+
+#: ../../Tutorials.rst:82
+msgid "Definition of the classification inputs"
+msgstr ""
+
+#: ../../Tutorials.rst:84
+msgid ""
+"We need to define the **input image** (i.e. the Landsat bands), the "
+"**training shapefile** (for the ROI collection), and the **signature list "
+"file** (which stores the spectral signatures calculated from ROIs or "
+"imported from other sources) in SCP."
+msgstr ""
+
+#: ../../Tutorials.rst:88
+msgid ""
+"Select the :ref:`band_set_tab` (also, a button is available in the SCP "
+":ref:`Toolbar`); click the button ``Select All``, then ``Add rasters to "
+"set`` (order the band names in ascending order, from top to bottom using the"
+" arrow buttons); then, select the ``Landsat 8 OLI`` from the combo box "
+"``Quick wavelength settings``, in order to set automatically the center "
+"wavelength of bands."
+msgstr ""
+
+#: ../../Tutorials.rst:96
+msgid ""
+"In order to create the training shapefile, in the :ref:`roi_dock` click the "
+"button ``New shp``, and select where to save the shapefile (for instance "
+"``ROI.shp``);"
+msgstr ""
+
+#: ../../Tutorials.rst:98
+msgid ""
+"Click the button ``Save`` in the :ref:`classification_dock`, in order to "
+"create a signature list file (for instance ``SIG.xml``)."
+msgstr ""
+
+#: ../../Tutorials.rst:100
+msgid ""
+"In the SCP :ref:`toolbar`, the name ``<< band set >>`` is displayed in the "
+"combo box ``Input image``. The shapefile name is displayed in the "
+":ref:`training_shapefile` combo box, and the path to the xml file is "
+"displayed in the :ref:`signature_list_file`. Now we are ready to collect the"
+" ROIs."
+msgstr ""
+
+#: ../../Tutorials.rst:107
+msgid "Collection of ROIs and Spectral Signatures"
+msgstr ""
+
+#: ../../Tutorials.rst:109
+msgid ""
+"**ROIs** are polygons drawn over homogeneous areas of the image that "
+"represent land cover classes. ROIs can be drawn manually or with a region "
+"growing process (i.e. image segmentation that groups similar pixels), and "
+"they should account for the spectral variability of land cover classes. SCP "
+"calculates the **spectral signatures** (which are used by classification "
+"algorithms) considering the pixel values under each ROI. SCP allows for the "
+"definition of a **Macroclass ID** (i.e. MC ID) and a **Class ID** (i.e. C "
+"ID) for each ROI or spectral signature, which are the identification codes "
+"of land cover classes. A **Macroclass** is a group of ROIs having different "
+"Class ID, which is useful when one needs to classify materials that have "
+"different spectral signatures in the same land cover class. For instance we "
+"could classify grass (e.g. ``ID class = 1`` and ``Macroclass ID = 1`` ) and "
+"trees (e.g. ``ID class = 2`` and ``Macroclass ID = 1`` ) as a vegetation "
+"class (e.g. ``Macroclass ID = 1`` ) as shown in Figure :ref:`figMC_example`."
+msgstr ""
+
+#: ../../Tutorials.rst:120
+msgid ":guilabel:`Macroclass example`"
+msgstr ""
+
+#: ../../Tutorials.rst:122
+msgid ""
+"Every ROI (or spectral signature) should have a unique C ID, while the MC ID"
+" can be shared with other ROIs. In the :ref:`classification_dock` it is "
+"possible to choose between MC ID and C ID classification."
+msgstr ""
+
+#: ../../Tutorials.rst:126
+msgid ""
+"In order to **create a ROI**, in the dock :ref:`roi_dock` click the button "
+"``+`` beside ``Create`` a ROI and then click any pixel of the image; zoom in"
+" the map and click on a blue pixel of the Tiber river (in order to define "
+"the ROI extent, change the :ref:`ROI_parameters` for ``Min ROI size`` and "
+"``Range radius``); after a few seconds the ROI polygon will appear over the "
+"image (a semitransparent orange polygon);"
+msgstr ""
+
+#: ../../Tutorials.rst:128
+msgid ""
+"**Tip**: ROIs are placed inside a group named ``Class_temp_group``; if no "
+"ROI is displayed, move the group on top of other layers in QGIS."
+msgstr ""
+
+#: ../../Tutorials.rst:132
+msgid ""
+"Under :ref:`ROI_signature_definition` type a brief description of the ROI "
+"inside the field ``C Info`` and ``MC Info``, and assign a Macroclass ID and "
+"Class ID (these codes can renamed and changed later from the :ref:`ROI_list`"
+" table, thus changing also the values in the training shapefile);"
+msgstr ""
+
+#: ../../Tutorials.rst:134
+msgid ""
+"In order to save the ROI to the training shapefile click the button ``Save "
+"ROI``; if the checkbox ``Add sig. list`` is checked, then the spectral "
+"signature is calculated and added to the :ref:`signature_list` table; also, "
+"it is possible to add signatures later, highlighting the ROIs in the "
+":ref:`ROI_list` and clicking ``Add to signature`` (if two or more "
+"highlighted ROIs have the same MC ID and C ID, a unique spectral signature "
+"is calculated considering all the pixels that are under those ROIs);"
+msgstr ""
+
+#: ../../Tutorials.rst:138
+msgid ""
+"Define the color of classes that will be used in the classification, with a "
+"double click on the ``Color`` column in the :ref:`signature_list` (the "
+"signature list is automatically saved when you save the QGIS project, or "
+"when you click the button ``Save`` in the :ref:`classification_dock`)."
+msgstr ""
+
+#: ../../Tutorials.rst:142
+msgid ""
+"Repeat the above steps for every land cover class, and assign to each ROI a "
+"new incremental Class ID, and the following Macroclass IDs:"
+msgstr ""
+
+#: ../../Tutorials.rst:144
+msgid "Water (e.g. surface water): MC ID = 1"
+msgstr ""
+
+#: ../../Tutorials.rst:146
+msgid "Vegetation (e.g. grassland or trees): MC ID = 2"
+msgstr ""
+
+#: ../../Tutorials.rst:148
+msgid "Built-up (e.g. artificial areas, buildings and asphalt): MC ID = 3"
+msgstr ""
+
+#: ../../Tutorials.rst:150
+msgid "Bare soil (e.g. soil without vegetation): MC ID = 4"
+msgstr ""
+
+#: ../../Tutorials.rst:152
+msgid ""
+"Following, a few examples of ROIs created for these land cover classes."
+msgstr ""
+
+#: ../../Tutorials.rst:157
+msgid ":guilabel:`Bare soil`"
+msgstr ""
+
+#: ../../Tutorials.rst:162
+msgid ":guilabel:`Vegetation: trees`"
+msgstr ""
+
+#: ../../Tutorials.rst:167
+msgid ":guilabel:`Vegetation: grass`"
+msgstr ""
+
+#: ../../Tutorials.rst:172
+msgid ":guilabel:`Built-up`"
+msgstr ""
+
+#: ../../Tutorials.rst:174
+msgid ""
+"After the collection of several ROIs, it is useful to display the **spectral"
+" signatures** thereof, in order to assess the spectral similarity:"
+msgstr ""
+
+#: ../../Tutorials.rst:176
+msgid ""
+"In the :ref:`signature_list` table, highlight one or more signatures, and "
+"click the button |sign_plot|; in the :ref:`spectral_signature_plot`, if the "
+"checkox `Plot` :math:`\\sigma` is checked, then the plot will display the "
+"standard deviation of signatures."
+msgstr ""
+
+#: ../../Tutorials.rst:183
+msgid ""
+"You can download the final `training shapefile "
+"<https://docs.google.com/uc?id=0BysUrKXWIDwBYkFmUGtEZEFucWc&export=download>`_"
+" and `spectral signature list "
+"<https://docs.google.com/uc?id=0BysUrKXWIDwBMkxFUVo4akk0X00&export=download>`_,"
+" where 11 spectral signatures were collected."
+msgstr ""
+
+#: ../../Tutorials.rst:188
+msgid "Classification of the study area"
+msgstr ""
+
+#: ../../Tutorials.rst:190
+msgid ""
+"SCP allows for **classification previews**, in order to assess very rapidly "
+"the classification results. Classifications previews are useful during the "
+"collection of ROIs, and for the selection of the more accurate spectral "
+"signatures. If the preview results are considered good (i.e. classes are "
+"correctly identified), the **classification of the entire image** can be "
+"performed. Otherwise, it is possible to remove one or more spectral "
+"signatures, or add new spectral signatures creating other ROIs as described "
+"in :ref:`ROI_collection`."
+msgstr ""
+
+#: ../../Tutorials.rst:196
+msgid ""
+"In the :ref:`classification_dock`, under :ref:`classification_preview` set "
+"``Size`` = 500 (i.e. the side of the classification preview in pixel unit), "
+"and select the algorithm ``Spectral Angle Mapping``; click the button ``+`` "
+"and then click on the image; after a few seconds, the classification preview"
+" will be displayed;"
+msgstr ""
+
+#: ../../Tutorials.rst:200
+msgid ""
+"Check ``Use Macroclass ID``, and click the button ``Redo``; another preview "
+"will be performed, but now using macroclasses;"
+msgstr ""
+
+#: ../../Tutorials.rst:204
+msgid ""
+"In order to perform the final classification, click the button ``Perform "
+"classification`` and select where to save the output (e.g. "
+"``classification.tif``)."
+msgstr ""
+
+#: ../../Tutorials.rst:208
+msgid ""
+"The final land cover classification can be downloaded from `here "
+"<https://docs.google.com/uc?id=0BysUrKXWIDwBUW5obHpWZzEtZE0&export=download>`_."
+msgstr ""
+
+#: ../../Tutorials.rst:210
+msgid ""
+"**Tip**: during the ROI/Signature collection, perform some classification "
+"previews using the Class ID, in order to assess how individual spectral "
+"signatures affect the classification; then check ``Use Macroclass ID``, in "
+"order to calculate the final land cover classification."
+msgstr ""
+
+#: ../../Tutorials.rst:215
+msgid "Calculation of classification accuracy"
+msgstr ""
+
+#: ../../Tutorials.rst:217
+msgid ""
+"The **accuracy assessment of land cover classification** is useful for "
+"identifying map errors. SCP allows for the calculation of accuracy comparing"
+" the classification raster to a reference shapefile. Usually, accuracy "
+"assessment requires ancillary data and field survey. In this tutorial we are"
+" are going to compare the land cover classification to the training ROIs."
+msgstr ""
+
+#: ../../Tutorials.rst:222
+msgid "Select the :ref:`post_processing_tab` > :ref:`accuracy_tab`;"
+msgstr ""
+
+#: ../../Tutorials.rst:230
+msgid ""
+"Select the ``classification.tif`` beside ``Select the classification to "
+"assess`` and select the ROI shapefile beside ``Select the reference "
+"shapefile``;"
+msgstr ""
+
+#: ../../Tutorials.rst:232
+msgid ""
+"Click the button ``Calculate error matrix`` and select a directory where the"
+" error matrix (a .csv file separated by tab) and the error raster are saved;"
+" the error matrix will be displayed, and the error raster will be loaded in "
+"QGIS, showing the errors in the map (each value of this raster represents a "
+"class of comparison between classification and reference shapefile, which is"
+" the ``ErrorMatrixCode`` in the error matrix file)."
+msgstr ""
+
+#: ../../Tutorials.rst:236
+msgid ""
+"The results of the error matrix show an overall accuracy of 95%, which is "
+"very good. The following error matrix represents the number of pixels "
+"classified correctly in the major diagonal. As you can see, most of the "
+"errors are between class 3 (built-up) and 4 (bare soil)."
+msgstr ""
+
+#: ../../Tutorials.rst:240
+msgid "Reference"
+msgstr ""
+
+#: ../../Tutorials.rst:242
+msgid "**Classification**"
+msgstr ""
+
+#: ../../Tutorials.rst:242 ../../Tutorials.rst:244
+msgid "**1**"
+msgstr ""
+
+#: ../../Tutorials.rst:242 ../../Tutorials.rst:246
+msgid "**2**"
+msgstr ""
+
+#: ../../Tutorials.rst:242 ../../Tutorials.rst:248
+msgid "**3**"
+msgstr ""
+
+#: ../../Tutorials.rst:242 ../../Tutorials.rst:250
+msgid "**4**"
+msgstr ""
+
+#: ../../Tutorials.rst:242 ../../Tutorials.rst:252
+msgid "**Total**"
+msgstr ""
+
+#: ../../Tutorials.rst:244 ../../Tutorials.rst:244 ../../Tutorials.rst:252
+msgid "87"
+msgstr ""
+
+#: ../../Tutorials.rst:244 ../../Tutorials.rst:244 ../../Tutorials.rst:244
+#: ../../Tutorials.rst:246 ../../Tutorials.rst:248 ../../Tutorials.rst:248
+#: ../../Tutorials.rst:250
+msgid "0"
+msgstr ""
+
+#: ../../Tutorials.rst:246
+msgid "1327"
+msgstr ""
+
+#: ../../Tutorials.rst:246 ../../Tutorials.rst:293
+msgid "1"
+msgstr ""
+
+#: ../../Tutorials.rst:246
+msgid "17"
+msgstr ""
+
+#: ../../Tutorials.rst:246
+msgid "1345"
+msgstr ""
+
+#: ../../Tutorials.rst:248
+msgid "4417"
+msgstr ""
+
+#: ../../Tutorials.rst:248 ../../Tutorials.rst:295
+msgid "2"
+msgstr ""
+
+#: ../../Tutorials.rst:248
+msgid "4419"
+msgstr ""
+
+#: ../../Tutorials.rst:250
+msgid "21"
+msgstr ""
+
+#: ../../Tutorials.rst:250
+msgid "268"
+msgstr ""
+
+#: ../../Tutorials.rst:250
+msgid "606"
+msgstr ""
+
+#: ../../Tutorials.rst:250
+msgid "895"
+msgstr ""
+
+#: ../../Tutorials.rst:252
+msgid "1348"
+msgstr ""
+
+#: ../../Tutorials.rst:252
+msgid "4686"
+msgstr ""
+
+#: ../../Tutorials.rst:252
+msgid "625"
+msgstr ""
+
+#: ../../Tutorials.rst:252
+msgid "6746"
+msgstr ""
+
+#: ../../Tutorials.rst:255
+msgid ""
+"From the error matrix file, we have also calculated the accuracy of user and"
+" producer; the results show that class 4 (bare soil) has high commission "
+"error (100 - user accuracy) and low omission error (100 - producer "
+"accuracy).  In order to improve the results, we should collect more ROIs and"
+" spectral signatures for the bare soil class, paying attention to the "
+"spectral similarity with the built-up class."
+msgstr ""
+
+#: ../../Tutorials.rst:257
+msgid "Class 1: producer accuracy [%] = 100.0; user accuracy [%] = 100.0"
+msgstr ""
+
+#: ../../Tutorials.rst:259
+msgid "Class 2: producer accuracy [%] = 98.44; user accuracy [%] = 98.66"
+msgstr ""
+
+#: ../../Tutorials.rst:261
+msgid "Class 3: producer accuracy [%] = 94.26; user accuracy [%] = 99.96"
+msgstr ""
+
+#: ../../Tutorials.rst:263
+msgid "Class 4: producer accuracy [%] = 96.96; user accuracy [%] = 67.71"
+msgstr ""
+
+#: ../../Tutorials.rst:268
+msgid "Calculation of the area of classes"
+msgstr ""
+
+#: ../../Tutorials.rst:270
+msgid ""
+"SCP allows for the calculation of a **classification report** with the "
+"percentage and the area of land cover classes."
+msgstr ""
+
+#: ../../Tutorials.rst:274
+msgid ""
+"Select the :ref:`post_processing_tab` > :ref:`classification_report_tab`;"
+msgstr ""
+
+#: ../../Tutorials.rst:282
+msgid ""
+"Select ``classification.tif`` beside ``Select the classification`` and click"
+" ``Calculate classification report``;"
+msgstr ""
+
+#: ../../Tutorials.rst:284
+msgid ""
+"After a few seconds the report will be displayed, showing the percentage and"
+" the area (area unit is calculated from the image itself)."
+msgstr ""
+
+#: ../../Tutorials.rst:288
+msgid "Following, the report table."
+msgstr ""
+
+#: ../../Tutorials.rst:291
+msgid "Class"
+msgstr ""
+
+#: ../../Tutorials.rst:291
+msgid "PixelSum"
+msgstr ""
+
+#: ../../Tutorials.rst:291
+msgid "Percentage %"
+msgstr ""
+
+#: ../../Tutorials.rst:291
+msgid "Area [metre^2]"
+msgstr ""
+
+#: ../../Tutorials.rst:293
+msgid "2353"
+msgstr ""
+
+#: ../../Tutorials.rst:293
+msgid "0.41"
+msgstr ""
+
+#: ../../Tutorials.rst:293
+msgid "2117700"
+msgstr ""
+
+#: ../../Tutorials.rst:295
+msgid "178040"
+msgstr ""
+
+#: ../../Tutorials.rst:295
+msgid "30.91"
+msgstr ""
+
+#: ../../Tutorials.rst:295
+msgid "160236000"
+msgstr ""
+
+#: ../../Tutorials.rst:297
+msgid "3"
+msgstr ""
+
+#: ../../Tutorials.rst:297
+msgid "269664"
+msgstr ""
+
+#: ../../Tutorials.rst:297
+msgid "46.82"
+msgstr ""
+
+#: ../../Tutorials.rst:297
+msgid "242697600"
+msgstr ""
+
+#: ../../Tutorials.rst:299
+msgid "4"
+msgstr ""
+
+#: ../../Tutorials.rst:299
+msgid "125943"
+msgstr ""
+
+#: ../../Tutorials.rst:299
+msgid "21.86"
+msgstr ""
+
+#: ../../Tutorials.rst:299
+msgid "113348700"
+msgstr ""
+
+#: ../../Tutorials.rst:302
+msgid ""
+"From these **results**, we can see that about 31% of the study area is "
+"vegetated, 47% is occupied by built-up, 22% is bare soil surface (also in "
+"agricultural areas), and 0.4% is surface water. Of course, these figures are"
+" the result of a tutorial for demonstrating the main features of the SCP for"
+" the land cover classification of a Landsat image; several ROIs for each "
+"class are required for a good classification (only 11 ROIs were collected in"
+" this tutorial), considering their spectral variability; also, field data is"
+" useful for improving the collection of ROIs and spectral signatures."
+msgstr ""
+
+#: ../../Tutorials.rst:305
+msgid "Following the video of this tutorial."
+msgstr ""
+
+#: ../../Tutorials.rst:311
+msgid "http://www.youtube.com/watch?v=Uq2S3_InQ8A"
+msgstr ""
+
+#: ../../Tutorials.rst:313
+msgid ""
+"Please, visit the blog `From GIS to Remote Sensing "
+"<http://fromgistors.blogspot.com/search/label/Tutorial>`_ for other "
+"tutorials such as:"
+msgstr ""
+
+#: ../../Tutorials.rst:315
+msgid ""
+"`Estimation of Land Surface Temperature with Landsat Thermal Infrared Band "
+"<http://fromgistors.blogspot.com/2014/01/estimation-of-land-surface-"
+"temperature.html>`_;"
+msgstr ""
+
+#: ../../Tutorials.rst:317
+msgid ""
+"`Land Cover Classification of Cropland "
+"<http://fromgistors.blogspot.com/2014/01/land-cover-classification-of-"
+"cropland.html>`_."
+msgstr ""

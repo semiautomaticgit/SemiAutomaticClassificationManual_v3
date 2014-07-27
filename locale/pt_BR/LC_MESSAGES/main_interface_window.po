@@ -1,0 +1,773 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-27 23:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../main_interface_window.rst:5
+msgid "Main Interface Window"
+msgstr ""
+
+#: ../../main_interface_window.rst:11
+msgid ""
+"The Main Interface Window is composed of several tabs grouped in sections. "
+"Each section contains several functions that are useful for the "
+"classification process, the pre processing of images, and the post "
+"processing of land cover classifications."
+msgstr ""
+
+#: ../../main_interface_window.rst:13
+msgid "Three buttons are always available:"
+msgstr ""
+
+#: ../../main_interface_window.rst:15
+msgid ""
+"``Show docks`` : show the :ref:`roi_dock` and the :ref:`classification_dock`"
+" if closed;"
+msgstr ""
+
+#: ../../main_interface_window.rst:16
+msgid "``Quick user guide`` : open the online user manual in a web browser;"
+msgstr ""
+
+#: ../../main_interface_window.rst:17
+msgid ""
+"``Online help`` : open the `Online help <http://fromgistors.blogspot.com/p"
+"/ask-for-help.html>`_ in a web browser, where it is possible to ask for help"
+" or report any issue regarding the Semi-Automatic Classification Plugin and "
+"the Semi-Automatic OS."
+msgstr ""
+
+#: ../../main_interface_window.rst:19
+msgid "Following, the list of tabs and the description thereof:"
+msgstr ""
+
+#: ../../main_interface_window.rst:30
+msgid "Tools tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:32
+msgid ""
+"The tab ``Tools`` includes several tools for the creation and manipulation "
+"of ROI and spectral signatures."
+msgstr ""
+
+#: ../../main_interface_window.rst:37
+msgid "Multiple ROI Creation tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:43
+msgid ":guilabel:`Multiple ROI Creation`"
+msgstr ""
+
+#: ../../main_interface_window.rst:45
+msgid ""
+"The tab ``Multiple ROI Creation`` allows for the automatic creation of ROIs,"
+" useful for the rapid classification of multi-temporal images, or for "
+"creating several ROIs using GPS data from field survey. It performs the "
+"region growing of ROIs at user defined points, requiring a list of point "
+"coordinates and class definitions. Created ROIs are automatically saved to "
+"the :ref:`training_shapefile`."
+msgstr ""
+
+#: ../../main_interface_window.rst:51
+msgid "Point coordinates and ROI definition"
+msgstr ""
+
+#: ../../main_interface_window.rst:62
+msgid "Table fields:"
+msgstr ""
+
+#: ../../main_interface_window.rst:54
+msgid "``X [float]`` : point X coordinate;"
+msgstr ""
+
+#: ../../main_interface_window.rst:55
+msgid "``Y [float]`` : point Y coordinate;"
+msgstr ""
+
+#: ../../main_interface_window.rst:56
+msgid "``MC ID [int]`` : ROI Macroclass ID;"
+msgstr ""
+
+#: ../../main_interface_window.rst:57
+msgid "``MC Info [text]`` : ROI Macroclass Information;"
+msgstr ""
+
+#: ../../main_interface_window.rst:58
+msgid "``Class ID [int]`` : ROI Class ID;"
+msgstr ""
+
+#: ../../main_interface_window.rst:59
+msgid "``C Info [text]`` : ROI Class Information;"
+msgstr ""
+
+#: ../../main_interface_window.rst:60
+msgid ""
+"``Min size [int]`` : the minimum area of a ROI (in pixel unit) when created "
+"using a region growing algorithm on a specific band;"
+msgstr ""
+
+#: ../../main_interface_window.rst:61
+msgid ""
+"``Max width [int]`` : the maximum width of a ROI (i.e. the side lenght of a "
+"square, centered at the seed pixel, which inscribes the ROI) in pixel unit;"
+msgstr ""
+
+#: ../../main_interface_window.rst:62
+msgid ""
+"``Range radius [float]`` : the interval which defines the maximum spectral "
+"distance between the seed pixel and the surrounding pixels (in radiometry "
+"unit); if the ROI size is less then ``Min size`` then the ``Range radius`` "
+"is overridden and ROI is created using the most similar pixels until size is"
+" at least ``Min size``;"
+msgstr ""
+
+#: ../../main_interface_window.rst:63
+msgid ""
+"``Rapid ROI band [int]`` : if defined, ROI is created only on the selected "
+"band of raster (the process is rapider than creating ROI using all the "
+"available bands); if empty, the resulting ROI is the intersection of ROIs "
+"calculated on each band (therefore it can be smaller than ``Min size`` );"
+msgstr ""
+
+#: ../../main_interface_window.rst:64
+msgid ""
+"[ ``Add point`` ]: add a new row to the table for the definition a point; "
+"all the table fields must be filled for the ROI creation;"
+msgstr ""
+
+#: ../../main_interface_window.rst:65
+msgid ""
+"[ ``Remove highlighted points`` ]: delete the highlighted rows from the "
+"table;"
+msgstr ""
+
+#: ../../main_interface_window.rst:66
+msgid ""
+"[ ``Import point list`` ]: import a point list from text file to the table; "
+"every line of the text file must contain values separated by tabs of ``X "
+"[float]``, ``Y [float]``, ``MC ID [int]``, ``MC Info [text]``, ``Class ID "
+"[int]``, ``C Info [text]``, ``Min size [int]``, ``Max width [int]``, ``Range"
+" radius [float]``, and optionally the ``Rapid ROI band [int]``;"
+msgstr ""
+
+#: ../../main_interface_window.rst:67
+msgid "[ ``Export point list`` ]: export the point list to text file;"
+msgstr ""
+
+#: ../../main_interface_window.rst:68
+msgid ""
+"[ ``Create and save ROIs`` ]: start the ROI creation process for all the "
+"points and save ROIs to the Training shapefile;"
+msgstr ""
+
+#: ../../main_interface_window.rst:69
+msgid ""
+"``Add sig. list``: if checked, calculate ROI spectral signatures and add "
+"them to the :ref:`signature_list`."
+msgstr ""
+
+#: ../../main_interface_window.rst:71 ../../main_interface_window.rst:111
+#: ../../main_interface_window.rst:157
+msgid "Following a brief video of this tool."
+msgstr ""
+
+#: ../../main_interface_window.rst:77
+msgid "http://www.youtube.com/watch?v=of49IWLnJ9k"
+msgstr ""
+
+#: ../../main_interface_window.rst:82
+msgid "USGS Spectral Library tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:88
+msgid ":guilabel:`USGS Spectral Library`"
+msgstr ""
+
+#: ../../main_interface_window.rst:90
+msgid ""
+"The tab ``USGS Spectral Library`` allows for the download of the `USGS "
+"spectral library <http://speclab.cr.usgs.gov/spectral-lib.html>`_ (Clark, "
+"R.N., Swayze, G.A., Wise, R., Livo, E., Hoefen, T., Kokaly, R., Sutley, "
+"S.J., 2007, USGS digital spectral library splib06a: U.S. Geological Survey, "
+"Digital Data Series 231). The libraries are grouped in chapters including "
+"Minerals, Mixtures, Coatings, Volatiles, Man-Made, Plants, Vegetation "
+"Communities, Mixtures with Vegetation, and Microorganisms. The downloaded "
+"library is automatically sampled according to the image band wavelengths "
+"defined in the :ref:`band_set_tab`, and added to the :ref:`signature_list`."
+msgstr ""
+
+#: ../../main_interface_window.rst:97
+msgid "Select a chapter"
+msgstr ""
+
+#: ../../main_interface_window.rst:99
+msgid ""
+"``Select a chapter`` : select one of the library chapters; after the "
+"selection, chapter libraries are shown in :ref:`select_library`;"
+msgstr ""
+
+#: ../../main_interface_window.rst:104
+msgid "Select a library"
+msgstr ""
+
+#: ../../main_interface_window.rst:106
+msgid ""
+"``Select a library`` : select one of the libraries; the library description "
+"is displayed in the frame ``Library description``;"
+msgstr ""
+
+#: ../../main_interface_window.rst:107
+msgid ""
+"``Add to signature list [internet connection required]`` : download the "
+"library and add the sampled spectral signature to the :ref:`signature_list` "
+"using the parameters defined in :ref:`ROI_signature_definition`."
+msgstr ""
+
+#: ../../main_interface_window.rst:109
+msgid ""
+"**Tip**: spectral libraries downloaded from the ``USGS Spectral Library`` "
+"can be used with the Minimum Distance or Spectral Angle Mapping algorithms, "
+"but not used with the Maximum Likelihood algorithm."
+msgstr ""
+
+#: ../../main_interface_window.rst:117
+msgid "http://www.youtube.com/watch?v=RSDuXJHjvgE"
+msgstr ""
+
+#: ../../main_interface_window.rst:122
+msgid "Pre processing tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:124
+msgid ""
+"The ``Pre processing`` tab allows for the manipulation of images before the "
+"actual classification process."
+msgstr ""
+
+#: ../../main_interface_window.rst:129
+msgid "Clip multiple rasters tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:135
+msgid ":guilabel:`Clip multiple rasters`"
+msgstr ""
+
+#: ../../main_interface_window.rst:137
+msgid ""
+"The tab ``Clip multiple rasters`` allows for cutting several image bands at "
+"once, using a rectangle defined with point coordinates or a boundary defined"
+" with a shapefile."
+msgstr ""
+
+#: ../../main_interface_window.rst:142
+msgid "Raster list"
+msgstr ""
+
+#: ../../main_interface_window.rst:144 ../../main_interface_window.rst:226
+#: ../../main_interface_window.rst:283
+msgid "[ ``Refresh list`` ]: refresh layer list;"
+msgstr ""
+
+#: ../../main_interface_window.rst:145
+msgid "[ ``Select all`` ]: select all the rasters to be clipped."
+msgstr ""
+
+#: ../../main_interface_window.rst:150
+msgid "Clip coordinates"
+msgstr ""
+
+#: ../../main_interface_window.rst:152
+msgid ""
+"[+]: click on the map for the definition of the Upper Left (UL) and Lower "
+"Right (LR) point coordinates (X and Y) of the rectangle used for clipping;"
+msgstr ""
+
+#: ../../main_interface_window.rst:153
+msgid ""
+"``Use shapefile for clipping``: if checked, use the selected shapefile "
+"(loaded in QGIS) for clipping, overriding point coordinates;"
+msgstr ""
+
+#: ../../main_interface_window.rst:154
+msgid ""
+"< ``No data value`` >: set the value for 'No data' pixels (e.g. outside the "
+"clipped area);"
+msgstr ""
+
+#: ../../main_interface_window.rst:155
+msgid ""
+"[ ``Clip selected rasters`` ]: open a window for choosing the output "
+"destination; rasters selected in the :ref:`raster_list` are clipped, saved "
+"in the output directory with the prefix ``clip_``, and automatically loaded "
+"in QGIS."
+msgstr ""
+
+#: ../../main_interface_window.rst:163
+msgid "http://www.youtube.com/watch?v=8FL0A6eVyzk"
+msgstr ""
+
+#: ../../main_interface_window.rst:168
+msgid "Landsat tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:174
+msgid ":guilabel:`Landsat`"
+msgstr ""
+
+#: ../../main_interface_window.rst:176
+msgid ""
+"The tab ``Landsat`` allows for the conversion of Landsat images from DN "
+"(i.e. Digital Numbers) to the physical measure of Top Of Atmosphere "
+"reflectance (TOA), or the application of a simple atmospheric correction "
+"using the DOS1 method (Dark Object Subtraction 1), which is an image-based "
+"technique (for more information about the Landsat conversion to TOA and DOS1"
+" correction, see :ref:`landsat_conversion_to_reflectance`)."
+msgstr ""
+
+#: ../../main_interface_window.rst:181
+msgid "Landsat conversion to TOA reflectance and brightness temperature"
+msgstr ""
+
+#: ../../main_interface_window.rst:183
+msgid ""
+"[ ``Select a directory`` ]: select the ``Directory containing Landsat "
+"bands`` (file names thereof must end with the respective number) and the "
+"metafile (a .txt file whit the suffix MTL) are stored; all bands found in "
+"this directory are converted automatically (it works with **Landsat 4, 5, 7,"
+" and 8**);"
+msgstr ""
+
+#: ../../main_interface_window.rst:184
+msgid ""
+"[ ``Select a directory`` ]: open a window for choosing the ``Output "
+"directory of converted bands``;"
+msgstr ""
+
+#: ../../main_interface_window.rst:185
+msgid ""
+"``Brightness temperature in Celsius`` : if checked, convert brightness "
+"temperature to Celsius (default is Kelvin);"
+msgstr ""
+
+#: ../../main_interface_window.rst:186
+msgid ""
+"``Apply DOS1 atmospheric correction`` : if checked, the DOS1 atmospheric "
+"correction is applied to all the bands (thermal bands excluded);"
+msgstr ""
+
+#: ../../main_interface_window.rst:187
+msgid ""
+"``Use No data value`` : if checked, 'No data' values are not counted during "
+"the DOS1 calculation of DNmin (for more information about the Landsat "
+"conversion to TOA and DOS1 correction, see "
+":ref:`landsat_conversion_to_reflectance`);"
+msgstr ""
+
+#: ../../main_interface_window.rst:188
+msgid ""
+"[ ``Create Virtual Raster`` ]: if checked, a virtual raster named "
+"``landast.vrt`` is created and loaded in QGIS after the conversion;"
+msgstr ""
+
+#: ../../main_interface_window.rst:189
+msgid ""
+"[ ``Perform conversion`` ]: start the conversion process; converted Landsat "
+"bands are saved in the output directory with the prefix ``RT_``, and "
+"automatically loaded in QGIS."
+msgstr ""
+
+#: ../../main_interface_window.rst:191
+msgid ""
+"**Tip**: only the bands found in the ``Directory containing Landsat bands`` "
+"are processed; therefore, it is possible to convert only certain bands if "
+"the other ones are removed from the input directory. The metafile (MTL) is "
+"always required."
+msgstr ""
+
+#: ../../main_interface_window.rst:197
+msgid "http://www.youtube.com/watch?v=pNXKGoDy0ag"
+msgstr ""
+
+#: ../../main_interface_window.rst:202
+msgid "Post processing tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:204
+msgid ""
+"The tab ``Post processing`` provides several functions that can be applied "
+"to the classification output."
+msgstr ""
+
+#: ../../main_interface_window.rst:209
+msgid "Accuracy tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:215
+msgid ":guilabel:`Accuracy`"
+msgstr ""
+
+#: ../../main_interface_window.rst:217
+msgid ""
+"The tab ``Accuracy`` allows for the comparison of a classification to a "
+"reference shapefile in order to assess the classification accuracy. The "
+"reference shapefile must have two fields named the same as the Macroclass ID"
+" and Class ID fields in the training shapefile; if ``Use Macroclass ID`` is "
+"checked in the :ref:`classification_alg`, then the Macroclass ID field of "
+"the shapefile is used as reference for the classes, otherwise the Class ID "
+"field is used."
+msgstr ""
+
+#: ../../main_interface_window.rst:222
+msgid "Error Matrix Input"
+msgstr ""
+
+#: ../../main_interface_window.rst:224
+msgid ""
+"``Select the classification to assess`` : select a classification raster;"
+msgstr ""
+
+#: ../../main_interface_window.rst:225
+msgid ""
+"``Select the reference shapefile`` : select a shapefile, used as reference "
+"layer (ground truth) for the accuracy assessment;"
+msgstr ""
+
+#: ../../main_interface_window.rst:227
+msgid ""
+"[ ``Calculate error matrix`` ]: open a window for choosing where to save the"
+" error raster (i.e. a .tif file showing the errors in the map, where each "
+"value represents a class of comparison between the classification and "
+"reference shapefile, which is the ``ErrorMatrixCode`` in the error matrix) "
+"and the error matrix (i.e. a .csv file separated by tab, with the same name "
+"defined for the .tif file), and start the calculation; the error matrix will"
+" be displayed in the tab frame and the error raster will be loaded in QGIS."
+msgstr ""
+
+#: ../../main_interface_window.rst:233
+msgid "http://www.youtube.com/watch?v=lSZbief-ZuU"
+msgstr ""
+
+#: ../../main_interface_window.rst:238
+msgid "Land cover change tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:244
+msgid ":guilabel:`Land cover change`"
+msgstr ""
+
+#: ../../main_interface_window.rst:246
+msgid ""
+"The tab ``Land cover change`` allows for the comparison between two "
+"classifications in order to assess the land cover changes."
+msgstr ""
+
+#: ../../main_interface_window.rst:251 ../../main_interface_window.rst:280
+msgid "Classification input"
+msgstr ""
+
+#: ../../main_interface_window.rst:253
+msgid ""
+"``Select the reference classification`` : select a reference classification "
+"raster;"
+msgstr ""
+
+#: ../../main_interface_window.rst:254
+msgid ""
+"``Select the new classification`` : select a new classification raster, to "
+"be compared with the reference classification;"
+msgstr ""
+
+#: ../../main_interface_window.rst:255
+msgid "``Report unchanged pixels``: if checked, report also unchanged pixels;"
+msgstr ""
+
+#: ../../main_interface_window.rst:256
+msgid ""
+"[ ``Calculate land cover change`` ]: open a window for choosing where to "
+"save the land cover change raster (i.e. a .tif file, where each value "
+"represents a class of comparison between the two classifications, which is "
+"the ``ChangeCode`` in the land cover change statistics) and the land cover "
+"change statistics (i.e. a file .csv saved in the same folder, with the same "
+"name defined for the .tif file), and start the calculation; the land cover "
+"change statistics will be displayed in the tab frame and the land cover "
+"change raster will be loaded in QGIS."
+msgstr ""
+
+#: ../../main_interface_window.rst:262
+msgid "http://www.youtube.com/watch?v=uFZd91E_68o"
+msgstr ""
+
+#: ../../main_interface_window.rst:267
+msgid "Classification report tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:273
+msgid ":guilabel:`Classification report`"
+msgstr ""
+
+#: ../../main_interface_window.rst:275
+msgid ""
+"The tab ``Classification report`` allows for the calculation of class "
+"statistics as number of pixels, percentage and area (area unit is calculated"
+" from the image itself)."
+msgstr ""
+
+#: ../../main_interface_window.rst:282
+msgid "``Select the classification`` : select a classification raster;"
+msgstr ""
+
+#: ../../main_interface_window.rst:284
+msgid ""
+"``Use No data value`` : if checked, 'No data' values are not counted in the "
+"report;"
+msgstr ""
+
+#: ../../main_interface_window.rst:285
+msgid ""
+"[ ``Calculate classification report`` ]: calculate the report and display it"
+" in the tab frame;"
+msgstr ""
+
+#: ../../main_interface_window.rst:286
+msgid "[ ``Save report to file`` ]: save the report to a .csv file."
+msgstr ""
+
+#: ../../main_interface_window.rst:292
+msgid "http://www.youtube.com/watch?v=6aD8vOPydUo"
+msgstr ""
+
+#: ../../main_interface_window.rst:297
+msgid "Band set tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:303
+msgid ":guilabel:`Band set`"
+msgstr ""
+
+#: ../../main_interface_window.rst:305
+msgid ""
+"The tab ``Band set`` allows for the definition of a set of single band "
+"rasters loaded in QGIS, used as ``Input image``. This tab allows for the "
+"definition of the ``Center wavelength`` of bands, which is required also for"
+" single multispectral rasters in order to calculate properly the spectral "
+"signatures. If a band set is defined, then the ``Image list`` in the "
+":ref:`toolbar` will contain the item `<< band set >>`."
+msgstr ""
+
+#: ../../main_interface_window.rst:311
+msgid "Band list"
+msgstr ""
+
+#: ../../main_interface_window.rst:313
+msgid "[ ``Refresh list`` ]: refresh raster band list;"
+msgstr ""
+
+#: ../../main_interface_window.rst:314
+msgid "[ ``Select all`` ]: select all raster bands;"
+msgstr ""
+
+#: ../../main_interface_window.rst:315
+msgid ""
+"[ ``Add rasters to set`` ]: add selected rasters to the band set; the band "
+"set is stored in the QGIS project."
+msgstr ""
+
+#: ../../main_interface_window.rst:320
+msgid "Band set definition"
+msgstr ""
+
+#: ../../main_interface_window.rst:322
+msgid "``Wavelength unit``: select the wavelength unit;"
+msgstr ""
+
+#: ../../main_interface_window.rst:328
+msgid "``Control bands``:"
+msgstr ""
+
+#: ../../main_interface_window.rst:324
+msgid "[ :math:`\\uparrow` ]: move highlighted bands upward;"
+msgstr ""
+
+#: ../../main_interface_window.rst:325
+msgid "[ :math:`\\downarrow` ]: move highlighted bands downward;"
+msgstr ""
+
+#: ../../main_interface_window.rst:326
+msgid "[ ``Remove band`` ]: remove highlighted bands from the band set;"
+msgstr ""
+
+#: ../../main_interface_window.rst:327
+msgid "[ ``Clear all`` ]: clear all bands from band set;"
+msgstr ""
+
+#: ../../main_interface_window.rst:328
+msgid "[ ``Import`` ]: import a previously saved band set from file;"
+msgstr ""
+
+#: ../../main_interface_window.rst:329
+msgid "[ ``Export`` ]: export the band set to a file."
+msgstr ""
+
+#: ../../main_interface_window.rst:330
+msgid ""
+"``Quick wavelength settings``: rapid definition of band center wavelength "
+"for several satellite sensors: Landsat 8 OLI, Landsat 7 ETM+, Landsat 4-5 "
+"TM, RapidEye, SPOT 4, SPOT 5, SPOT 6, Pleiades, QuickBird;"
+msgstr ""
+
+#: ../../main_interface_window.rst:332
+msgid ""
+"**Tip**: Although it is recommended to define the ``Center wavelength`` of "
+"bands, it is possible to assign the band number instead of the wavelength. "
+"Of course, the :ref:`USGS_spec_library_tab` will not be useful, but the ROI "
+"collection and the classification process will still be working."
+msgstr ""
+
+#: ../../main_interface_window.rst:338
+msgid "http://www.youtube.com/watch?v=FYaWcG0fX_0"
+msgstr ""
+
+#: ../../main_interface_window.rst:343
+msgid "Settings tab"
+msgstr ""
+
+#: ../../main_interface_window.rst:349
+msgid ":guilabel:`Settings`"
+msgstr ""
+
+#: ../../main_interface_window.rst:351
+msgid ""
+"The tab ``Settings`` allows for the customization of the required fields in "
+"the training shapefile, and other parameters useful during the ROI "
+"collection and classification. In addition, the tab ``Settings`` contains "
+"debugging utilities for the creation of a Log file (i.e. recording of plugin"
+" activities for reporting issues)."
+msgstr ""
+
+#: ../../main_interface_window.rst:357
+msgid "Field names of training shapefile"
+msgstr ""
+
+#: ../../main_interface_window.rst:359
+msgid ""
+"[ ``MC ID field`` ]: name of the Macroclass ID field (default is ``MC_ID``);"
+msgstr ""
+
+#: ../../main_interface_window.rst:360
+msgid ""
+"[ ``MC Info field`` ]: name of the Information field (default is "
+"``MC_info``);"
+msgstr ""
+
+#: ../../main_interface_window.rst:361
+msgid "[ ``C ID field`` ]: name of the ID field (default is ``C_ID``);"
+msgstr ""
+
+#: ../../main_interface_window.rst:362
+msgid ""
+"[ ``C Info field`` ]: name of the Information field (default is ``C_info``);"
+msgstr ""
+
+#: ../../main_interface_window.rst:363
+msgid "[ ``Reset field names`` ]: reset field names to default."
+msgstr ""
+
+#: ../../main_interface_window.rst:365
+msgid ""
+"**Tip**: these settings allow for using a shapefile having different field "
+"names, without editing the shapefile. It is sufficient to change the field "
+"names according to the shapefile fields. Thus, the shapefile loaded in QGIS "
+"will be listed in the :ref:`training_shapefile` (see this `video "
+"<http://youtu.be/4V4Fh_MWgSA?t=2m53s>`_ )."
+msgstr ""
+
+#: ../../main_interface_window.rst:370
+msgid "ROI style"
+msgstr ""
+
+#: ../../main_interface_window.rst:372
+msgid ""
+"[ ``Change colour`` ]: change ROI colour; this configuration is stored in "
+"the QGIS registry;"
+msgstr ""
+
+#: ../../main_interface_window.rst:373
+msgid "[ ``Reset ROI style`` ]: reset ROI colour and transparency to default;"
+msgstr ""
+
+#: ../../main_interface_window.rst:374
+msgid ""
+"[- ``Transparency`` -]: change ROI transparency; this configuration is "
+"stored in the QGIS registry."
+msgstr ""
+
+#: ../../main_interface_window.rst:379
+msgid "Spectral signature"
+msgstr ""
+
+#: ../../main_interface_window.rst:381
+msgid ""
+"< ``Plot legend Max number of characters`` >: limit the text length of names"
+" in the spectral plot legend."
+msgstr ""
+
+#: ../../main_interface_window.rst:386
+msgid "Classification process"
+msgstr ""
+
+#: ../../main_interface_window.rst:388
+msgid ""
+"``Play sound when finished``: play a sound when the classification process "
+"is completed; this configuration is stored in the QGIS registry;"
+msgstr ""
+
+#: ../../main_interface_window.rst:389
+msgid ""
+"``Save algorithm files``: in addition to the classification output, save the"
+" intermediate files calculated by the classification algorithm (one .tif "
+"file for each land cover class representing the `similarity` of each pixel "
+"to the class thereof); this configuration is stored in the QGIS registry."
+msgstr ""
+
+#: ../../main_interface_window.rst:394
+msgid "RAM"
+msgstr ""
+
+#: ../../main_interface_window.rst:396
+msgid ""
+"< ``Available RAM (MB)`` >: set the available RAM (in MB) that will be used "
+"during the processes; this configuration is stored in the QGIS registry."
+msgstr ""
+
+#: ../../main_interface_window.rst:401
+msgid "Debug"
+msgstr ""
+
+#: ../../main_interface_window.rst:403
+msgid ""
+"``Records events in a log file`` : start recording events in a Log file; "
+"this configuration is stored in the QGIS registry;"
+msgstr ""
+
+#: ../../main_interface_window.rst:404
+msgid ""
+"[ ``Export Log file`` ]: open a window for choosing where to save the Log "
+"file (i.e. a .txt file)."
+msgstr ""
+
+#: ../../main_interface_window.rst:405
+msgid "[ ``Clear Log file content`` ]: clear the content of Log file."
+msgstr ""
+
+#: ../../main_interface_window.rst:411
+msgid "http://www.youtube.com/watch?v=4V4Fh_MWgSA"
+msgstr ""
