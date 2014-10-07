@@ -1,62 +1,68 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-27 23:33+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2014-10-07 18:39+0200\n"
+"Last-Translator: Daria Svidzinska <d.svidzinska@gmail.com>\n"
+"Language-Team: KNU OSGeo Research and Education Lab <lab.osgeo@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 1.6.9\n"
 
 #: ../../installation_ubuntu.rst:5
 msgid "Installation in Ubuntu Linux"
-msgstr ""
+msgstr "Встановлення в  Ubuntu Linux"
 
 #: ../../installation_ubuntu.rst:14
 msgid "QGIS download and installation"
-msgstr ""
+msgstr "Завантаження та встановлення QGIS"
 
 #: ../../installation_ubuntu.rst:16
 msgid "Open a terminal and type::"
-msgstr ""
+msgstr "Відкрийте термінал та надрукуйте::"
 
 #: ../../installation_ubuntu.rst:20
 msgid "Press Enter and type the user password;"
-msgstr ""
+msgstr "Натисніть Ввести та надрукуйте пароль користувача;"
 
 #: ../../installation_ubuntu.rst:22
 msgid "Type in a terminal::"
-msgstr ""
+msgstr "Надрукуйте в терміналі::"
 
 #: ../../installation_ubuntu.rst:26
 msgid "Press Enter and wait until the software is downloaded and installed."
 msgstr ""
+"Натисніть Ввести та зачекайте поки програмне забезпечення буде завантажене "
+"та встановлене."
 
 #: ../../installation_ubuntu.rst:28
 msgid "Now, QGIS 2 is installed."
-msgstr ""
+msgstr "Тепер QGIS 2 встановлено."
 
 #: ../../installation_ubuntu.rst:35
 msgid "Semi-Automatic Classification Plugin installation"
-msgstr ""
+msgstr "Встановлення Модуля Напівавтоматичної класифікації"
 
 #: ../../installation_ubuntu.rst:37
 msgid "Run QGIS 2;"
-msgstr ""
+msgstr "Запустіть QGIS 2;"
 
 #: ../../installation_ubuntu.rst:39
 msgid ""
 "From the main menu, select ``Plugins`` > ``Manage and Install Plugins``;"
-msgstr ""
+msgstr "З головного меню виберіть ``Модулі`` > ``Управління модулями``;"
 
 #: ../../installation_ubuntu.rst:43
 msgid ""
 "From the menu ``All``, select the Semi-Automatic Classification Plugin and "
 "click the button ``Install plugin``;"
 msgstr ""
+"З меню ``Всі`` виберіть Модуль Напівавтоматичної класифікації та натисніть "
+"кнопку ``Встановити модуль``;"
 
 #: ../../installation_ubuntu.rst:47
 msgid ""
@@ -64,18 +70,27 @@ msgid ""
 "Automatic Classification Plugin is checked in the menu ``Installed`` (the "
 "restart of QGIS could be necessary to complete the SCP installation);"
 msgstr ""
+"Модуль Напівавтоматичної класифікації (МНК) повинен бути активований "
+"автоматично; тим не менше, переконайтесь, що Модуль Напівавтоматичної "
+"класифікації увімкнено в меню ``Встановлені`` (для завершення встановлення "
+"МНК може знадобитись перезапуск QGIS);"
 
 #: ../../installation_ubuntu.rst:54
 msgid "Configuration of the plugin"
-msgstr ""
+msgstr "Налаштування модуля"
 
 #: ../../installation_ubuntu.rst:56
 msgid ""
-"Now, the Semi-Automatic Classification Plugin is installed and two docks and"
-" a toolbar should be added to QGIS. If not, the SCP is available under the "
-"Raster menu of QGIS. It is possible to move the :ref:`toolbar` and the docks"
-" according to your needs, as in the following image."
+"Now, the Semi-Automatic Classification Plugin is installed and two docks and "
+"a toolbar should be added to QGIS. If not, the SCP is available under the "
+"Raster menu of QGIS. It is possible to move the :ref:`toolbar` and the docks "
+"according to your needs, as in the following image."
 msgstr ""
+"Тепер Модуль Напівавтоматичної класифікації встановлено та до QGIS повинні "
+"бути додані дві пересувні панелі та панель інструментів. В протилежному "
+"випадку МНК доступний через меню QGIS Растр. :ref:`toolbar` та пересувні "
+"панелі можливо переміщувати відповідно до ваших потреб як показано на "
+"рисунку."
 
 #: ../../installation_ubuntu.rst:60
 msgid ""
@@ -85,3 +100,8 @@ msgid ""
 "should be half of the system RAM. For instance, if your system has 2GB of "
 "RAM, set the value to 1024."
 msgstr ""
+"З метою зменшення часу обробки рекомендується налаштувати об'єм доступної "
+"оперативної пам'яті (RAM). Натисніть кнопку |settings| на панелі "
+"інструментів МНК, щоб відкрити вкладку :ref:`settings_tab`, та встановіть "
+"значення ``Available RAM`` вдвічі менше за системну RAM. Наприклад, якщо "
+"ваша система має 2Гб RAM, то встановіть значення 1024."
