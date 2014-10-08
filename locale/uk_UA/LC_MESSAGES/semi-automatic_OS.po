@@ -1,19 +1,21 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-27 23:33+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2014-10-08 19:19+0200\n"
+"Last-Translator: Daria Svidzinska <d.svidzinska@gmail.com>\n"
+"Language-Team: KNU OSGeo Research and Education Lab <lab.osgeo@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: os\n"
+"X-Generator: Poedit 1.6.9\n"
 
 #: ../../semi-automatic_OS.rst:5
 msgid "Semi-Automatic OS"
-msgstr ""
+msgstr "Напівавтоматична ОС"
 
 #: ../../semi-automatic_OS.rst:11
 msgid ""
@@ -22,28 +24,44 @@ msgid ""
 "Classification Plugin for QGIS, already configured along with all the "
 "required dependencies."
 msgstr ""
+"Напівавтоматична ОС це полегшена віртуальна машина для проведення "
+"класифікації земного покриву на основі зображень дистанційного зондування. "
+"До неї входить вже налаштований модуль Напівавтоматичної класифікації для "
+"QGIS з усіма необхідними залежностями."
 
 #: ../../semi-automatic_OS.rst:16
 msgid ":guilabel:`Semi-Automatic OS desktop`"
-msgstr ""
+msgstr ":guilabel:`робочий стіл Напівавтоматичної ОС`"
 
 #: ../../semi-automatic_OS.rst:18
 msgid ""
-"The Semi-Automatic OS is based on `Debian <https://www.debian.org/>`_ 7 "
-"32-bit, and it is designed to require very little hardware resources. It "
-"uses `LXDE <http://lxde.org/>`_ and `Openbox <http://openbox.org/>`_ as main"
-" desktop environment. This virtual machine can be useful for testing the "
-"Semi-Automatic Classification Plugin, or when the installation of the "
-"required programs in the host system is problematic. |br| The Semi-Automatic"
-" OS is available as a virtual machine that can be run in the open source "
+"The Semi-Automatic OS is based on `Debian <https://www.debian.org/>`_ 7 32-"
+"bit, and it is designed to require very little hardware resources. It uses "
+"`LXDE <http://lxde.org/>`_ and `Openbox <http://openbox.org/>`_ as main "
+"desktop environment. This virtual machine can be useful for testing the Semi-"
+"Automatic Classification Plugin, or when the installation of the required "
+"programs in the host system is problematic. |br| The Semi-Automatic OS is "
+"available as a virtual machine that can be run in the open source "
 "VirtualBox, or any other virtualization program. The following is a guide "
 "for the installation of the Semi-Automatic OS in the open source program of "
 "virtualization VirtualBox."
 msgstr ""
+"Напівавтоматична ОС ґрунтується на `Debian <http://www.debian.org/>`_ 7 32-"
+"біт і спроектована таким чином, щоб потребувати якмога менше апаратних "
+"засобів. Вона використовує `LXDE <http://lxde.org/>`_ та `Openbox <http://"
+"openbox.org/>`_ як головне середовище робочого стола. Дана віртуальна машина "
+"може бути корисною для тестування Модуля Напівавтоматичної класифікації або "
+"у випадку, якщо встановлення необхідних програм у головній комп'ютерній  "
+"системі ускладнене. |br| Напівавтоматична ОС доступна як віртуальна машина, "
+"яка може бути запущена у програмі для створення віртуального середовища з "
+"відкритим вихідним кодом VirualBox або будь-якому іншому програмному "
+"забезпеченні для віртуалізації.  Нижче наведено інструкцію з встановлення "
+"Напівавтоматичної ОС у програмі для створення віртуального середовища з "
+"відкритим вихідним кодом VirtualBox."
 
 #: ../../semi-automatic_OS.rst:26
 msgid "Installation in VirtualBox"
-msgstr ""
+msgstr "Встановлення у VirtualBox"
 
 #: ../../semi-automatic_OS.rst:28
 msgid ""
@@ -51,19 +69,22 @@ msgid ""
 "source software (select a proper version depending on your OS) and install "
 "it; at the end of the installation restart the system;"
 msgstr ""
+"Завантажте прогамне забезпечення з відкритим вихідним кодом `VirtualBox "
+"<https://www.virtualbox.org/wiki/Downloads>`_  (виберіть відповідно до вашої "
+"ОС) та встановіть його; по завершенні встановлення перезапустіть систему;"
 
 #: ../../semi-automatic_OS.rst:30
 msgid ""
 "Download the Semi-Automatic OS virtual machine (about 600 MB) from `here "
-"<https://sourceforge.net/projects/semi-automatic-"
-"os/files/latest/download?source=files>`_;"
+"<https://sourceforge.net/projects/semi-automatic-os/files/latest/download?"
+"source=files>`_;"
 msgstr ""
 
 #: ../../semi-automatic_OS.rst:32
 msgid ""
 "Extract the virtual machine content in a directory (it requires about 3 GB "
-"of disk space); the file is compressed in 7z format (if needed, download the"
-" open source extraction software from http://www.7-zip.org/);"
+"of disk space); the file is compressed in 7z format (if needed, download the "
+"open source extraction software from http://www.7-zip.org/);"
 msgstr ""
 
 #: ../../semi-automatic_OS.rst:34
@@ -76,8 +97,8 @@ msgstr ""
 
 #: ../../semi-automatic_OS.rst:38
 msgid ""
-"Type a name for the virtual machine (for instance Semi-Automatic OS); select"
-" Linux and Debian as Type and Version respectively; click Next;"
+"Type a name for the virtual machine (for instance Semi-Automatic OS); select "
+"Linux and Debian as Type and Version respectively; click Next;"
 msgstr ""
 
 #: ../../semi-automatic_OS.rst:42
@@ -123,6 +144,6 @@ msgid ""
 "Free Software Foundation, version 3 of the License. Semi-Automatic OS is "
 "distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; "
 "without even the implied warranty of MERCHANTABILITY or FITNESS FOR A "
-"PARTICULAR PURPOSE. See the GNU General Public License for more details. See"
-" http://www.gnu.org/licenses/.``"
+"PARTICULAR PURPOSE. See the GNU General Public License for more details. See "
+"http://www.gnu.org/licenses/.``"
 msgstr ""
