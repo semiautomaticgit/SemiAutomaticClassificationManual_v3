@@ -1,75 +1,85 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-27 23:33+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2014-10-31 18:43+0200\n"
+"Last-Translator: Daria Svidzinska <d.svidzinska@gmail.com>\n"
+"Language-Team: KNU OSGeo Research and Education Lab <lab.osgeo@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: ../../toolbar.rst:5
 msgid "Toolbar"
-msgstr ""
+msgstr "Панель інструментів"
 
 #: ../../toolbar.rst:14
 msgid ":guilabel:`Toolbar`"
-msgstr ""
+msgstr ":guilabel:`Панель інструментів`"
 
 #: ../../toolbar.rst:16
 msgid ""
 "The ``Toolbar`` allows for the selection of the ``Input image``, and "
-"includes several buttons for opening the main functions of the "
-":ref:`main_interface_window`."
+"includes several buttons for opening the main functions of the :ref:"
+"`main_interface_window`."
 msgstr ""
+"``Панель інструментів`` дозволяє вибрати входове зображення ``Input image`` "
+"та включає декілька кнопок для відкриття основних функцій :ref:"
+"`main_interface_window`."
 
 #: ../../toolbar.rst:18
 msgid ""
-"|plugin|: show the :ref:`main_interface_window` and display the "
-":ref:`roi_dock` and the :ref:`classification_dock`;"
+"|plugin|: show the :ref:`main_interface_window` and display the :ref:"
+"`roi_dock` and the :ref:`classification_dock`;"
 msgstr ""
+"|plugin|: показати :ref:`main_interface_window` та відобразити :ref:"
+"`roi_dock` і :ref:`classification_dock`;"
 
 #: ../../toolbar.rst:19
 msgid ""
 "``Input image`` : select a multispectral image (loaded in QGIS) from the "
-"list; if a band set is defined, then the list will contain the item `<< band"
-" set >>`;"
+"list; if a band set is defined, then the list will contain the item `<< band "
+"set >>`;"
 msgstr ""
+"``Input image`` : вибрати мультиспектральне зображення (завантажене в QGIS) "
+"з переліку; якщо визначено набір каналів, то переілік міститиме елемент `<< "
+"band set >>`;"
 
 #: ../../toolbar.rst:20
 msgid "|refresh|: refresh image list;"
-msgstr ""
+msgstr "|refresh|: оновити перелік зображень;"
 
 #: ../../toolbar.rst:21
 msgid "|band_set|: open the :ref:`band_set_tab`;"
-msgstr ""
+msgstr "|band_set|: відкрити :ref:`band_set_tab`;"
 
 #: ../../toolbar.rst:22
 msgid "|sign_plot|: open the :ref:`spectral_signature_plot`;"
-msgstr ""
+msgstr "|sign_plot|: відкрити :ref:`spectral_signature_plot`;"
 
 #: ../../toolbar.rst:23
 msgid "|tools|: open the :ref:`tools_tab`;"
-msgstr ""
+msgstr "|tools|: відкрити :ref:`tools_tab`;"
 
 #: ../../toolbar.rst:24
 msgid "|preprocessing|: open the :ref:`pre_processing_tab`;"
-msgstr ""
+msgstr "|preprocessing|: відкрити :ref:`pre_processing_tab`;"
 
 #: ../../toolbar.rst:25
 msgid "|postprocessing|: open the :ref:`post_processing_tab`;"
-msgstr ""
+msgstr "|postprocessing|: відкрити :ref:`post_processing_tab`;"
 
 #: ../../toolbar.rst:26
 msgid "|settings|: open the :ref:`settings_tab`;"
-msgstr ""
+msgstr "|settings|: відкрити :ref:`settings_tab`;"
 
 #: ../../toolbar.rst:27
 msgid "|guide|: open the online user manual in a web browser;"
-msgstr ""
+msgstr "|guide|: відкрити онлайн-посібник користувача у веб-браузері;"
 
 #: ../../toolbar.rst:28
 msgid ""
@@ -78,11 +88,15 @@ msgid ""
 "report any issue regarding the Semi-Automatic Classification Plugin and the "
 "Semi-Automatic OS."
 msgstr ""
+"|help|: відкрити у веб-браузері `Онлайн-довідку <http://fromgistors.blogspot."
+"com/p/ask-for-help.html>`_ , де є можливість задати питання або повідомити "
+"про будь-які складнощі в роботі з Модулем напівавтоматичної класифікації або "
+"Напівавтоматичною ОС."
 
 #: ../../toolbar.rst:30
 msgid "Following a brief video of this tool."
-msgstr ""
+msgstr "Дивіться коротке відео про цей інструмент."
 
 #: ../../toolbar.rst:36
 msgid "http://www.youtube.com/watch?v=YIcd_qc_AzM"
-msgstr ""
+msgstr "http://www.youtube.com/watch?v=YIcd_qc_AzM"
