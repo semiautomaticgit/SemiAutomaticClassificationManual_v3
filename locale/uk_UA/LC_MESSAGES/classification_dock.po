@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-27 23:33+0200\n"
-"PO-Revision-Date: 2014-11-03 21:14+0200\n"
+"PO-Revision-Date: 2014-11-18 18:45+0200\n"
 "Last-Translator: Daria Svidzinska <d.svidzinska@gmail.com>\n"
 "Language-Team: KNU OSGeo Research and Education Lab <lab.osgeo@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -215,37 +215,48 @@ msgstr ""
 
 #: ../../classification_dock.rst:77
 msgid "Classification algorithm"
-msgstr ""
+msgstr "Алгоритм класифікації (Classification algorithm)"
 
 #: ../../classification_dock.rst:79
 msgid ""
 "``Select a classification algorithm`` : available classification algorithms "
 "are: Maximum Likelihood; Minimum Distance; Spectral Angle Mapping;"
 msgstr ""
+"``Select a classification algorithm`` : доступні алгоритми класифікації - "
+"Максимальної імовірності (Maximum Likelihood), Мінімальної відстані (Minimum "
+"Distance), Картографування спектрального кута (Spectral Angle Mapping);"
 
 #: ../../classification_dock.rst:82
 msgid ""
 "``Threshold`` : if threshold is equal to 0, then all image pixels are "
 "classified; otherwise:"
 msgstr ""
+"``Threshold`` : якщо порогова величина дорівнює 0, то всі пікселі зображення "
+"класифікуються; в протилежному випадку:"
 
 #: ../../classification_dock.rst:81
 msgid ""
 "for Maximum Likelihood, pixels are unclassified if probability is less than "
 "threshold  value (max 100);"
 msgstr ""
+"для Максимальної імовірності пікселі не класифікуються, якщо імовірність "
+"менша за значення порогової величини (максимально 100);"
 
 #: ../../classification_dock.rst:82
 msgid ""
 "for Minimum Distance, pixels are unclassified if distance is greater than "
 "threshold value;"
 msgstr ""
+"для Мінімальної відстані пікселі не класифікуються, якщо відстань більша за "
+"значення порогової величини;"
 
 #: ../../classification_dock.rst:83
 msgid ""
 "for Spectral Angle Mapping, pixels are unclassified if spectral angle "
 "distance is greater than threshold value (max 90)."
 msgstr ""
+"для Картографування спектрального кута пікселі не класифікуються. якщо "
+"спектральний кут більший за значення порогової величини (максимально 90)."
 
 #: ../../classification_dock.rst:84
 msgid ""
@@ -253,46 +264,61 @@ msgid ""
 "Macroclass ID; if unchecked, then the classification is performed using the "
 "ID class only."
 msgstr ""
+"``Use Macroclass ID`` : якщо опцію увімкнено, то класифікація проводиться на "
+"підставі унікальних ідентифікаторів макрокласів (Macroclass ID); якщо опцію "
+"вимкнено, класифікація проводиться тільки на підставі унікальних "
+"ідентифікаторів класів (Сlass ID)."
 
 #: ../../classification_dock.rst:89
 msgid "Classification preview"
-msgstr ""
+msgstr "Попередній перегляд результатів класифікації (Classification preview)"
 
 #: ../../classification_dock.rst:91
 msgid "[+]: recall the pointer for the creation of a classification preview ;"
 msgstr ""
+"[+]: викликати вказівник для створення попереднього перегляду результатів "
+"класифікації ;"
 
 #: ../../classification_dock.rst:92
 msgid ""
 "``Size`` : size in pixel unit of a classification preview (i.e. the side "
 "lenght of a square, centered at the clicked pixel);"
 msgstr ""
+"``Size`` : розмір в пікселях області попереднього перегляду результатів "
+"класифікації (тобто довжина сторони квадрата з центром у пікселі, "
+"визначеному клацанням);"
 
 #: ../../classification_dock.rst:93
 msgid ""
 "[ ``Redo`` ]: create a new classification preview centered at the same pixel "
 "of the previous one."
 msgstr ""
+"[ ``Redo`` ]: створити новий попередній перегляд результатів класифікації з "
+"центром в тому самому пікселі."
 
 #: ../../classification_dock.rst:98
 msgid "Classification style"
-msgstr ""
+msgstr "Стиль класифікації (Classification style)"
 
 #: ../../classification_dock.rst:100
 msgid ""
 "[ ``Select qml`` ]: select a previously saved .qml file; this configuration "
 "is stored in the QGIS project;"
 msgstr ""
+"[ ``Select qml`` ]: вибрати попередньо збережений файл .qml; це налаштування "
+"зберігається в проекті QGIS;"
 
 #: ../../classification_dock.rst:101
 msgid ""
 "[ ``Reset`` ]: reset classification and preview styles to default (i.e. "
 "colors are automatically assigned to classes)."
 msgstr ""
+"[ ``Reset`` ]: відновити стилі класифікації та попереднього перегляду до "
+"напередзаданих (тобто кольори для класів будуть присвоюватись автоматично)."
 
 #: ../../classification_dock.rst:106
 msgid "Classification output"
-msgstr ""
+msgstr "Вихідні результати класифікації (Classification output)"
 
 #: ../../classification_dock.rst:108
 msgid ""
@@ -300,16 +326,21 @@ msgid ""
 "the purpose of masking the classification (i.e. image pixels outside this "
 "shapefile will be unclassified);"
 msgstr ""
+"``Apply mask`` : якщо опцію увімкнено, то користувач може вибрати "
+"полігональний шейп-файл для маскування області результатів класифікації;"
 
 #: ../../classification_dock.rst:109
 msgid "[ ``Reset`` ]: reset the shapefile mask."
-msgstr ""
+msgstr "[ ``Reset`` ]: відновити маску шейп-файла."
 
 #: ../../classification_dock.rst:110
 msgid ""
 "``Create vector`` : if checked, a shapefile classification is saved into the "
 "same folder and with the same name defined for the classification output;"
 msgstr ""
+"``Create vector`` : якщо опцію увімкнено, то шейп-файл класифікації "
+"зберігається в той самий каталог та під тим самим іменем, які визначено для "
+"вихідних результатів класифікації;"
 
 #: ../../classification_dock.rst:111
 msgid ""
@@ -320,6 +351,12 @@ msgid ""
 "``_report``; in addition, the results are shown in the :ref:"
 "`classification_report_tab`;"
 msgstr ""
+"``Classification report`` : якщо опцію увімкнено, то розраховується звіт про "
+"результати класифікації земного покриву,  який містить дані про кількість "
+"пікселів, частку (%) та площу кожного класу; звіт зберігається як файл .csv "
+"з приставкою ``_report`` в той самий каталог та під тим самим іменем, які "
+"визначено для вихідних результатів класифікації; додатково результати "
+"унаочнюються на вкладці :ref:`classification_report_tab`;"
 
 #: ../../classification_dock.rst:112
 msgid ""
@@ -327,10 +364,13 @@ msgid ""
 "destination, and perform the image classification that is saved as a .tif "
 "file, along with the optional outputs."
 msgstr ""
+"[ ``Perform classification`` ]: відкриває діалогове вікно для визначення "
+"каталогу вихідних результатів, реалізації класифікації з наступним "
+"збереженням результатів в файл .tif, а також додаткових вихідних даних."
 
 #: ../../classification_dock.rst:114
 msgid "Following a brief video of this tool."
-msgstr ""
+msgstr "Дивіться коротке відео про цей інструмент."
 
 #: ../../classification_dock.rst:120
 msgid "http://www.youtube.com/watch?v=GFySyhlVnYw"
