@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-27 23:33+0200\n"
-"PO-Revision-Date: 2014-11-18 18:59+0200\n"
+"PO-Revision-Date: 2014-11-26 18:05+0200\n"
 "Last-Translator: Daria Svidzinska <d.svidzinska@gmail.com>\n"
 "Language-Team: KNU OSGeo Research and Education Lab <lab.osgeo@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -76,11 +76,11 @@ msgstr ""
 
 #: ../../main_interface_window.rst:37
 msgid "Multiple ROI Creation tab"
-msgstr ""
+msgstr "Вкладка Пакетне створення ROI (Multiple ROI Creation tab)"
 
 #: ../../main_interface_window.rst:43
 msgid ":guilabel:`Multiple ROI Creation`"
-msgstr ""
+msgstr ":guilabel:`Пакетне створення ROI`"
 
 #: ../../main_interface_window.rst:45
 msgid ""
@@ -91,50 +91,61 @@ msgid ""
 "coordinates and class definitions. Created ROIs are automatically saved to "
 "the :ref:`training_shapefile`."
 msgstr ""
+"Вкладка ``Multiple ROI Creation`` дозволяє автоматично створювати ROI, що "
+"зручно для цілей оперативної класифікації різночасових зображень, або для "
+"створення декількох ROI на підставі даних GPS з польового обстеження. Метод "
+"застосовує нарощування областей ROI в точках, що визначені користувачем, і "
+"потребує перелік координат точок та визначення класів. Створені ROI "
+"автоматично зберігаються до :ref:`training_shapefile`."
 
 #: ../../main_interface_window.rst:51
 msgid "Point coordinates and ROI definition"
 msgstr ""
+"Координати точок та визначення ROI (Point coordinates and ROI definition)"
 
 #: ../../main_interface_window.rst:62
 msgid "Table fields:"
-msgstr ""
+msgstr "Поля таблиці:"
 
 #: ../../main_interface_window.rst:54
 msgid "``X [float]`` : point X coordinate;"
-msgstr ""
+msgstr "``X [float]`` : X-координата точки;"
 
 #: ../../main_interface_window.rst:55
 msgid "``Y [float]`` : point Y coordinate;"
-msgstr ""
+msgstr "``Y [float]`` : Y-координата точки;"
 
 #: ../../main_interface_window.rst:56
 msgid "``MC ID [int]`` : ROI Macroclass ID;"
-msgstr ""
+msgstr "``MC ID [int]`` : уникальний ідентифікатор макрокласу ROI;"
 
 #: ../../main_interface_window.rst:57
 msgid "``MC Info [text]`` : ROI Macroclass Information;"
-msgstr ""
+msgstr "``MC Info [text]`` : характеристика макрокласу ROI;"
 
 #: ../../main_interface_window.rst:58
 msgid "``Class ID [int]`` : ROI Class ID;"
-msgstr ""
+msgstr "``Class ID [int]`` : унікальний ідентифікатор ROI;"
 
 #: ../../main_interface_window.rst:59
 msgid "``C Info [text]`` : ROI Class Information;"
-msgstr ""
+msgstr "``C Info [text]`` : характеристика класу ROI;"
 
 #: ../../main_interface_window.rst:60
 msgid ""
 "``Min size [int]`` : the minimum area of a ROI (in pixel unit) when created "
 "using a region growing algorithm on a specific band;"
 msgstr ""
+"``Min size [int]`` : мінмальна площа ROI для індивідуального каналу (в "
+"пікселях) при створенні з використанням алгоритму нарощування областей;"
 
 #: ../../main_interface_window.rst:61
 msgid ""
 "``Max width [int]`` : the maximum width of a ROI (i.e. the side lenght of a "
 "square, centered at the seed pixel, which inscribes the ROI) in pixel unit;"
 msgstr ""
+"``Max width [int]`` : максимальна ширина ROI в пікселях (тобто довжина "
+"сторони квадрата до якого вписана ROI з центром в пікселі-насінині);"
 
 #: ../../main_interface_window.rst:62
 msgid ""
@@ -144,6 +155,11 @@ msgid ""
 "is overridden and ROI is created using the most similar pixels until size is "
 "at least ``Min size``;"
 msgstr ""
+" ``Range radius [float]`` : інтервал, який визначає максимальну спектральну "
+"відстань між пікселем-насіниною та пікселями, що його оточують (в "
+"радіометричних одиницях); якщо розмір ROI менший за ``Min size``, то ``Range "
+"radius`` ігнорується, а ROI створюється на підставі максимально подібних "
+"пікселів доки її розмір не досягне ``Min size``;"
 
 #: ../../main_interface_window.rst:63
 msgid ""
@@ -152,18 +168,25 @@ msgid ""
 "available bands); if empty, the resulting ROI is the intersection of ROIs "
 "calculated on each band (therefore it can be smaller than ``Min size`` );"
 msgstr ""
+"``Rapid ROI band [int]`` : якщо увімкнено, то ROI створюється тільки для "
+"визначеного каналу растра (процес швидший ніж створення ROI з використанням "
+"всіх доступних каналів); якщо вимкнено, то результуюча ROI це перетин ROI, "
+"розрахованих для кожного каналу (тому вона може бути меншою за ``Min "
+"size`` );"
 
 #: ../../main_interface_window.rst:64
 msgid ""
 "[ ``Add point`` ]: add a new row to the table for the definition a point; "
 "all the table fields must be filled for the ROI creation;"
 msgstr ""
+"[ ``Add point`` ]: додає новий рядок до таблиці для визначення точки; для "
+"створення ROI всі поля таблиці мають бути заповнені;"
 
 #: ../../main_interface_window.rst:65
 msgid ""
 "[ ``Remove highlighted points`` ]: delete the highlighted rows from the "
 "table;"
-msgstr ""
+msgstr "[ ``Remove highlighted points`` ]: видаляє виділені рядки з таблиці;"
 
 #: ../../main_interface_window.rst:66
 msgid ""
@@ -173,27 +196,37 @@ msgid ""
 "[int]``, ``C Info [text]``, ``Min size [int]``, ``Max width [int]``, ``Range "
 "radius [float]``, and optionally the ``Rapid ROI band [int]``;"
 msgstr ""
+"[ ``Import point list`` ]: імпортувати переілк точок з текстового файлу в "
+"таблицю; кожен рядок текстового файлу повинен містити значенння `X "
+"[float]``, ``Y [float]``, ``MC ID [int]``, ``MC Info [text]``, ``Class ID "
+"[int]``, ``C Info [text]``, ``Min size [int]``, ``Max width [int]``, ``Range "
+"radius [float]`` та необов'язково ``Rapid ROI band [int]``, розділені "
+"символом табуляції;"
 
 #: ../../main_interface_window.rst:67
 msgid "[ ``Export point list`` ]: export the point list to text file;"
-msgstr ""
+msgstr "[ ``Export point list`` ]: експорт переілку точок до текстового файлу;"
 
 #: ../../main_interface_window.rst:68
 msgid ""
 "[ ``Create and save ROIs`` ]: start the ROI creation process for all the "
 "points and save ROIs to the Training shapefile;"
 msgstr ""
+"[ ``Create and save ROIs`` ]: запускає процес створення ROI для всіх точок "
+"та зберігає ROI до навчального шейп-файлу;"
 
 #: ../../main_interface_window.rst:69
 msgid ""
 "``Add sig. list``: if checked, calculate ROI spectral signatures and add "
 "them to the :ref:`signature_list`."
 msgstr ""
+"``Add sig. list``: якщо опцію увімкнено, то розраховуються спектральні "
+"сигнатури ROI та додаються до :ref:`signature_list`."
 
 #: ../../main_interface_window.rst:71 ../../main_interface_window.rst:111
 #: ../../main_interface_window.rst:157
 msgid "Following a brief video of this tool."
-msgstr ""
+msgstr "Дивіться коротке відео про цей інструмент."
 
 #: ../../main_interface_window.rst:77
 msgid "http://www.youtube.com/watch?v=of49IWLnJ9k"
@@ -201,11 +234,11 @@ msgstr ""
 
 #: ../../main_interface_window.rst:82
 msgid "USGS Spectral Library tab"
-msgstr ""
+msgstr "Вкладка Спектральна бібліотека USGS (USGS Spectral Library)"
 
 #: ../../main_interface_window.rst:88
 msgid ":guilabel:`USGS Spectral Library`"
-msgstr ""
+msgstr ":guilabel:`Спектральна бібліотека USGS`"
 
 #: ../../main_interface_window.rst:90
 msgid ""
@@ -219,26 +252,40 @@ msgid ""
 "library is automatically sampled according to the image band wavelengths "
 "defined in the :ref:`band_set_tab`, and added to the :ref:`signature_list`."
 msgstr ""
+"Вкладка ``USGS Spectral Library`` дозволяє завантажувати з `USGS spectral "
+"library <http://speclab.cr.usgs.gov/spectral-lib.html>`_ (Clark, R.N., "
+"Swayze, G.A., Wise, R., Livo, E., Hoefen, T., Kokaly, R., Sutley, S.J., "
+"2007, USGS digital spectral library splib06a: U.S. Geological Survey, "
+"Digital Data Series 231). Бібілотеки згруповані за розділами, що включають "
+"Мінерали, Суміші, Покриття, Мінливі поверхні, Антропогенні поверхні, "
+"Рослини, Рослинні угруповання, Суміші з включенням рослинності, "
+"Мікроорганізми. Завантажена бібілотека автоматично обробляється відповідно "
+"до довжин каналів зображення, визначених на :ref:`band_set_tab` та додається "
+"до :ref:`signature_list`."
 
 #: ../../main_interface_window.rst:97
 msgid "Select a chapter"
-msgstr ""
+msgstr "Вибрати розділ (Select a chapter)"
 
 #: ../../main_interface_window.rst:99
 msgid ""
 "``Select a chapter`` : select one of the library chapters; after the "
 "selection, chapter libraries are shown in :ref:`select_library`;"
 msgstr ""
+"``Select a chapter`` : вибрати один з розділів; після вибору бібілотеки "
+"розділу показуються у :ref:`select_library`;"
 
 #: ../../main_interface_window.rst:104
 msgid "Select a library"
-msgstr ""
+msgstr "Вибрати бібіліотеку (Select a library)"
 
 #: ../../main_interface_window.rst:106
 msgid ""
 "``Select a library`` : select one of the libraries; the library description "
 "is displayed in the frame ``Library description``;"
 msgstr ""
+"``Select a library`` : вибрати одну з бібіліотек; характеристика бібліотеки "
+"наводиться в блоці ``Library description``;"
 
 #: ../../main_interface_window.rst:107
 msgid ""
@@ -246,6 +293,9 @@ msgid ""
 "library and add the sampled spectral signature to the :ref:`signature_list` "
 "using the parameters defined in :ref:`ROI_signature_definition`."
 msgstr ""
+"``Add to signature list [internet connection required]`` : завантажити "
+"бібілотеку та додати спектральну сигнатуру зразка до :ref:`signature_list` "
+"використовуючи параметри визначені у :ref:`ROI_signature_definition`."
 
 #: ../../main_interface_window.rst:109
 msgid ""
@@ -253,6 +303,10 @@ msgid ""
 "can be used with the Minimum Distance or Spectral Angle Mapping algorithms, "
 "but not used with the Maximum Likelihood algorithm."
 msgstr ""
+"**Порада**: спектральні бібліотеки завантажені з ``Спектральної бібіліотеки "
+"USGS`` можуть бути використані з алгоритмами Мінімальної відстані або "
+"Картографування спектрального кута, але непридатні для алгоритму "
+"Максимальної імовірності."
 
 #: ../../main_interface_window.rst:117
 msgid "http://www.youtube.com/watch?v=RSDuXJHjvgE"
@@ -260,21 +314,23 @@ msgstr ""
 
 #: ../../main_interface_window.rst:122
 msgid "Pre processing tab"
-msgstr ""
+msgstr "Вкладка Передоброблення (Pre processing)"
 
 #: ../../main_interface_window.rst:124
 msgid ""
 "The ``Pre processing`` tab allows for the manipulation of images before the "
 "actual classification process."
 msgstr ""
+"Вкладка ``Pre processing`` дозволяє маніпулювати з зображеннями до "
+"безпосереднього процесу класифікації."
 
 #: ../../main_interface_window.rst:129
 msgid "Clip multiple rasters tab"
-msgstr ""
+msgstr "Вкладка Пакетне обрізання растрів (Clip multiple rasters)"
 
 #: ../../main_interface_window.rst:135
 msgid ":guilabel:`Clip multiple rasters`"
-msgstr ""
+msgstr ":guilabel:`Пакетне обрізання растрів`"
 
 #: ../../main_interface_window.rst:137
 msgid ""
@@ -282,41 +338,51 @@ msgid ""
 "once, using a rectangle defined with point coordinates or a boundary defined "
 "with a shapefile."
 msgstr ""
+"Вкладка ``Clip multiple rasters`` дозволяє обрізати декілька каналів "
+"зображення за один раз, використовуючи прямокутник визначений точковими "
+"координатами або межі визначені шейп-файлом."
 
 #: ../../main_interface_window.rst:142
 msgid "Raster list"
-msgstr ""
+msgstr "Перелік растрів (Raster list)"
 
 #: ../../main_interface_window.rst:144 ../../main_interface_window.rst:226
 #: ../../main_interface_window.rst:283
 msgid "[ ``Refresh list`` ]: refresh layer list;"
-msgstr ""
+msgstr "[ ``Refresh list`` ]: оновити перелік шарів;"
 
 #: ../../main_interface_window.rst:145
 msgid "[ ``Select all`` ]: select all the rasters to be clipped."
-msgstr ""
+msgstr "[ ``Select all`` ]: вибрати для обрізання всі растри."
 
 #: ../../main_interface_window.rst:150
 msgid "Clip coordinates"
-msgstr ""
+msgstr "Координати обрізання (Clip coordinates)"
 
 #: ../../main_interface_window.rst:152
 msgid ""
 "[+]: click on the map for the definition of the Upper Left (UL) and Lower "
 "Right (LR) point coordinates (X and Y) of the rectangle used for clipping;"
 msgstr ""
+"[+]: клацніть на карті для визначення координат (X та Y) точок верхнього "
+"лівого (UL) та нижнього правого (LR) кутів прямокутника, що буде "
+"використаний для обрізання;"
 
 #: ../../main_interface_window.rst:153
 msgid ""
 "``Use shapefile for clipping``: if checked, use the selected shapefile "
 "(loaded in QGIS) for clipping, overriding point coordinates;"
 msgstr ""
+"``Use shapefile for clipping``: якщо опцію увімкнено, то вкажіть шейп-файл "
+"для обрізання;"
 
 #: ../../main_interface_window.rst:154
 msgid ""
 "< ``No data value`` >: set the value for 'No data' pixels (e.g. outside the "
 "clipped area);"
 msgstr ""
+"< ``No data value`` >: встановіть значення 'No data' для пікселів, що не "
+"місятять даних (тобто знаходяться за межами обрізання);"
 
 #: ../../main_interface_window.rst:155
 msgid ""
@@ -325,6 +391,10 @@ msgid ""
 "in the output directory with the prefix ``clip_``, and automatically loaded "
 "in QGIS."
 msgstr ""
+"[ ``Clip selected rasters`` ]: відкрити діалогове вікно для визначення "
+"вихідного каталогу; растри вибрані з :ref:`raster_list` обрізаються, "
+"зберігаються до визначеного каталогу з приставкою ``clip_`` та автоматично "
+"завантажуються в QGIS."
 
 #: ../../main_interface_window.rst:163
 msgid "http://www.youtube.com/watch?v=8FL0A6eVyzk"
@@ -332,7 +402,7 @@ msgstr ""
 
 #: ../../main_interface_window.rst:168
 msgid "Landsat tab"
-msgstr ""
+msgstr "Вкладка Landsat"
 
 #: ../../main_interface_window.rst:174
 msgid ":guilabel:`Landsat`"
