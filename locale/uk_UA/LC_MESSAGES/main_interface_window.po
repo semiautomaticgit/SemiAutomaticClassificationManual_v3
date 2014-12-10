@@ -4,14 +4,14 @@ msgstr ""
 "Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-27 23:33+0200\n"
-"PO-Revision-Date: 2014-11-26 18:05+0200\n"
+"PO-Revision-Date: 2014-12-10 19:12+0200\n"
 "Last-Translator: Daria Svidzinska <d.svidzinska@gmail.com>\n"
 "Language-Team: KNU OSGeo Research and Education Lab <lab.osgeo@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk_UA\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.7.1\n"
 
 #: ../../main_interface_window.rst:5
 msgid "Main Interface Window"
@@ -417,10 +417,19 @@ msgid ""
 "more information about the Landsat conversion to TOA and DOS1 correction, "
 "see :ref:`landsat_conversion_to_reflectance`)."
 msgstr ""
+"Вкладка ``Landsat`` дозволяє перерахувати дискретизовані та калібровані "
+"значення даних Landsat (т.зв. DN - Digital Numbers) в фізичну величину "
+"відбивальності на поверхні атмосфери (англ. Top Of Atmosphere reflectance - "
+"TOA) або застосовувати просте атмосферне коректування методом DOS1 (англ. "
+"Dark Object Subtraction 1 - віднімання темного об'єкта), який є відносною "
+"технікою на підставі зображення (для більш докладної інформації дивіться про "
+"перерахунок значень даних Landsat в TOA-відбивальність та коректування DOS1 "
+"дивіться :ref:`landsat_conversion_to_reflectance`)."
 
 #: ../../main_interface_window.rst:181
 msgid "Landsat conversion to TOA reflectance and brightness temperature"
 msgstr ""
+"Перерахунок даних Landsat у  TOA-відбивальність та яскравісну температуру"
 
 #: ../../main_interface_window.rst:183
 msgid ""
@@ -430,24 +439,35 @@ msgid ""
 "this directory are converted automatically (it works with **Landsat 4, 5, 7, "
 "and 8**);"
 msgstr ""
+"[ ``Select a directory`` ]: обрати ``Directory containing Landsat bands`` "
+"(імена файлів повинні закінчуватись відповідним номером) та файл метаданих "
+"(файл .txt з приставкою  MTL); всі канали, що знаходяться в каталозі, будут "
+"автоматично перераховані (працює з даними  **Landsat 4, 5, 7 та 8**);"
 
 #: ../../main_interface_window.rst:184
 msgid ""
 "[ ``Select a directory`` ]: open a window for choosing the ``Output "
 "directory of converted bands``;"
 msgstr ""
+"[ ``Select a directory`` ]: відкриває вікно вибору ``Output directory of "
+"converted bands``;"
 
 #: ../../main_interface_window.rst:185
 msgid ""
 "``Brightness temperature in Celsius`` : if checked, convert brightness "
 "temperature to Celsius (default is Kelvin);"
 msgstr ""
+"``Brightness temperature in Celsius`` :  якщо опцію увімкнено, то яскравісна "
+"температура перераховується в градуси Цельсія (початково - Кельвін);"
 
 #: ../../main_interface_window.rst:186
 msgid ""
 "``Apply DOS1 atmospheric correction`` : if checked, the DOS1 atmospheric "
 "correction is applied to all the bands (thermal bands excluded);"
 msgstr ""
+"``Apply DOS1 atmospheric correction`` : якщо опцію увімкнено, то до всіх "
+"каналів (за виключенням термального) застосовується атмосферне коректування "
+"DOS1;"
 
 #: ../../main_interface_window.rst:187
 msgid ""
@@ -456,12 +476,18 @@ msgid ""
 "conversion to TOA and DOS1 correction, see :ref:"
 "`landsat_conversion_to_reflectance`);"
 msgstr ""
+"``Use No data value`` : якщо опцію увімкнено, то значення 'No data' не "
+"опрацьовуються під час DOS1-розрахунку DNmin (для більш докладної інформації "
+"про перерахунок даних Landsat в TOA-відбиальність та коректування DOS1 "
+"дивіться :ref:`landsat_conversion_to_reflectance`);"
 
 #: ../../main_interface_window.rst:188
 msgid ""
 "[ ``Create Virtual Raster`` ]: if checked, a virtual raster named ``landast."
 "vrt`` is created and loaded in QGIS after the conversion;"
 msgstr ""
+"[ ``Create Virtual Raster`` ]: якщо опцію увімкнено, то після перерахунку "
+"створюється та завантажується до QGIS віртуальний растр ``landast.vrt``;"
 
 #: ../../main_interface_window.rst:189
 msgid ""
@@ -469,6 +495,9 @@ msgid ""
 "bands are saved in the output directory with the prefix ``RT_``, and "
 "automatically loaded in QGIS."
 msgstr ""
+"[ ``Perform conversion`` ]: розпочати процес перерахунку; перераховані "
+"канали Landsat зберігаються до вихідного каталогу з приставкою ``RT_`` та "
+"автоматично завантажуються до QGIS."
 
 #: ../../main_interface_window.rst:191
 msgid ""
@@ -477,6 +506,10 @@ msgid ""
 "the other ones are removed from the input directory. The metafile (MTL) is "
 "always required."
 msgstr ""
+"**Порада**: обробляються лише ті кананали, які знаходяться в ``Directory "
+"containing Landsat bands``; відтак є можливість перерахувати лише певні "
+"канали, якщо інші будуть вилучені з входового каталогу. Файл метаданих (MTL) "
+"необхідний в будь-якому разі."
 
 #: ../../main_interface_window.rst:197
 msgid "http://www.youtube.com/watch?v=pNXKGoDy0ag"
@@ -484,21 +517,23 @@ msgstr ""
 
 #: ../../main_interface_window.rst:202
 msgid "Post processing tab"
-msgstr ""
+msgstr "Вкладка Післяоброблення (Post processing)"
 
 #: ../../main_interface_window.rst:204
 msgid ""
 "The tab ``Post processing`` provides several functions that can be applied "
 "to the classification output."
 msgstr ""
+"Вкладка ``Post processing`` забезпечує декілька функцій, які можуть бути "
+"застосовані до вихідних результатів класифікації."
 
 #: ../../main_interface_window.rst:209
 msgid "Accuracy tab"
-msgstr ""
+msgstr "Вкладка Точність (Accuracy)"
 
 #: ../../main_interface_window.rst:215
 msgid ":guilabel:`Accuracy`"
-msgstr ""
+msgstr ":guilabel:`Точність`"
 
 #: ../../main_interface_window.rst:217
 msgid ""
@@ -510,21 +545,29 @@ msgid ""
 "the shapefile is used as reference for the classes, otherwise the Class ID "
 "field is used."
 msgstr ""
+"Вкладка ``Accuracy`` дозволяє співставити класифікацію з контрольним шейп-"
+"файлом для оцінки точності класифікації. Контрольний шейп-файл повинен мати "
+"два поля з такими самими назвами полів Macroclass ID та Class ID, як і "
+"навчальний шейп-файл; якщо опцію  ``Use Macroclass ID`` увімкнено в  :ref:"
+"`classification_alg`, то поле Macroclass ID шейп-файлу застосовується як "
+"контрольне для класів, в протилежному випдку використовується поле Class ID."
 
 #: ../../main_interface_window.rst:222
 msgid "Error Matrix Input"
-msgstr ""
+msgstr "Входові дані матриці помилок (Error Matrix Input)"
 
 #: ../../main_interface_window.rst:224
 msgid ""
 "``Select the classification to assess`` : select a classification raster;"
-msgstr ""
+msgstr "``Select the classification to assess`` : виберіть растр класифікації;"
 
 #: ../../main_interface_window.rst:225
 msgid ""
 "``Select the reference shapefile`` : select a shapefile, used as reference "
 "layer (ground truth) for the accuracy assessment;"
 msgstr ""
+"``Select the reference shapefile`` : виберіть шейп-файл, який буде "
+"використано як контрольний (наземні контрольні дані) для оцінки точності;"
 
 #: ../../main_interface_window.rst:227
 msgid ""
@@ -536,6 +579,13 @@ msgid ""
 "defined for the .tif file), and start the calculation; the error matrix will "
 "be displayed in the tab frame and the error raster will be loaded in QGIS."
 msgstr ""
+"[ ``Calculate error matrix`` ]: відкриває вікно  для вибору каталогу до "
+"якого буде збережено растр помилок (файл .tif, який показує помилки на "
+"карті, де кожне значення представляє клас співставлення класифікації з "
+"контрольним шеп-файлом та відповідає ``ErrorMatrixCode`` в матриці помилок) "
+"та матрицю помилок (файл .csv з розділювачами табуляції з тим самими іменем, "
+"що було визначене для файлу .tif) та починає розрахунок; матриця помилок "
+"буде виведена в рамці вкладки, а растр помилок - завантажений до QGIS."
 
 #: ../../main_interface_window.rst:233
 msgid "http://www.youtube.com/watch?v=lSZbief-ZuU"
@@ -543,37 +593,45 @@ msgstr ""
 
 #: ../../main_interface_window.rst:238
 msgid "Land cover change tab"
-msgstr ""
+msgstr "Вкладка Зміни земного покриву (Land cover change)"
 
 #: ../../main_interface_window.rst:244
 msgid ":guilabel:`Land cover change`"
-msgstr ""
+msgstr ":guilabel:`Зміни земного покриву`"
 
 #: ../../main_interface_window.rst:246
 msgid ""
 "The tab ``Land cover change`` allows for the comparison between two "
 "classifications in order to assess the land cover changes."
 msgstr ""
+"Вкладка ``Land cover change`` дозволяє співставити дві класифікації для "
+"оцінки змін земного покриву."
 
 #: ../../main_interface_window.rst:251 ../../main_interface_window.rst:280
 msgid "Classification input"
-msgstr ""
+msgstr "Входові класифікації (Classification input)"
 
 #: ../../main_interface_window.rst:253
 msgid ""
 "``Select the reference classification`` : select a reference classification "
 "raster;"
 msgstr ""
+"``Select the reference classification`` : виберіть растр контрольної "
+"класифікації;"
 
 #: ../../main_interface_window.rst:254
 msgid ""
 "``Select the new classification`` : select a new classification raster, to "
 "be compared with the reference classification;"
 msgstr ""
+"``Select the new classification`` : виберіть растр нової класифікації, який "
+"буде співставлений з контрольним;"
 
 #: ../../main_interface_window.rst:255
 msgid "``Report unchanged pixels``: if checked, report also unchanged pixels;"
 msgstr ""
+"``Report unchanged pixels``: якщо опцію увімкнено, то буде повідомлено також "
+"про пікселі, які не зазнали змін;"
 
 #: ../../main_interface_window.rst:256
 msgid ""
@@ -586,6 +644,14 @@ msgid ""
 "change statistics will be displayed in the tab frame and the land cover "
 "change raster will be loaded in QGIS."
 msgstr ""
+"[ ``Calculate land cover change`` ]: відкриває діалогове вікно вибору "
+"каталогу для збереження растра змін земного покриву (файл .tif, де кожне "
+"значення відповідає класу співставлення між двома класифікаціями, "
+"представленому  ``ChangeCode`` в статистиці змін земного покриву) та "
+"ститистики змін земного покриву (файл  .csv, що зберігається в тому самому "
+"каталозі і під тим самим іменем, що були визначені для файлу  .tif) та "
+"запускає розрахунок; статистика змін земного покриву буде унаочнена у вікні "
+"вкладки та растр змін буде завантажений до QGIS."
 
 #: ../../main_interface_window.rst:262
 msgid "http://www.youtube.com/watch?v=uFZd91E_68o"
@@ -593,11 +659,11 @@ msgstr ""
 
 #: ../../main_interface_window.rst:267
 msgid "Classification report tab"
-msgstr ""
+msgstr "Вкладка Звіт про результати класифікації (Classification report)"
 
 #: ../../main_interface_window.rst:273
 msgid ":guilabel:`Classification report`"
-msgstr ""
+msgstr ":guilabel:`Звіт про результати класифікації`"
 
 #: ../../main_interface_window.rst:275
 msgid ""
@@ -605,26 +671,33 @@ msgid ""
 "statistics as number of pixels, percentage and area (area unit is calculated "
 "from the image itself)."
 msgstr ""
+"Вкладка ``Classification report`` дозволяє розрахувати статистику за класами "
+"у пікселях, відсотках та одиницях площі (одиниці площі розраховуються "
+"безпосередньо на основі зображення)."
 
 #: ../../main_interface_window.rst:282
 msgid "``Select the classification`` : select a classification raster;"
-msgstr ""
+msgstr "``Select the classification`` : виберіть растр класифікації;"
 
 #: ../../main_interface_window.rst:284
 msgid ""
 "``Use No data value`` : if checked, 'No data' values are not counted in the "
 "report;"
 msgstr ""
+"``Use No data value`` : якщо опцію увімкнено, то значення 'No data' не "
+"враховуються в звіті;"
 
 #: ../../main_interface_window.rst:285
 msgid ""
 "[ ``Calculate classification report`` ]: calculate the report and display it "
 "in the tab frame;"
 msgstr ""
+"[ ``Calculate classification report`` ]: розрахувати звіт та унаочнити його "
+"у вікні вкладки;"
 
 #: ../../main_interface_window.rst:286
 msgid "[ ``Save report to file`` ]: save the report to a .csv file."
-msgstr ""
+msgstr "[ ``Save report to file`` ]: зберегти звіто до файлу .csv."
 
 #: ../../main_interface_window.rst:292
 msgid "http://www.youtube.com/watch?v=6aD8vOPydUo"
@@ -632,11 +705,11 @@ msgstr ""
 
 #: ../../main_interface_window.rst:297
 msgid "Band set tab"
-msgstr ""
+msgstr "Вкладка Набір каналів (Band set)"
 
 #: ../../main_interface_window.rst:303
 msgid ":guilabel:`Band set`"
-msgstr ""
+msgstr ":guilabel:`Набір каналів`"
 
 #: ../../main_interface_window.rst:305
 msgid ""
@@ -647,32 +720,40 @@ msgid ""
 "signatures. If a band set is defined, then the ``Image list`` in the :ref:"
 "`toolbar` will contain the item `<< band set >>`."
 msgstr ""
+"Вкладка ``Band set`` дозволяє визначити в якості ``Input image` `набір "
+"одноканальних растрів, завантажених до QGIS. Ця вкладка також відповідає за "
+"визначення ``Center wavelength`` каналів, необхідне також для єдиного "
+"мультиспектрального растра, з метою коректного розрахунку спектральних "
+"сигнатур. Якщо набір каналів визначено, то ``Image list`` на :ref:`toolbar` "
+"міститиме елемент `<< band set >>`."
 
 #: ../../main_interface_window.rst:311
 msgid "Band list"
-msgstr ""
+msgstr "Перелік каналів (Band list)"
 
 #: ../../main_interface_window.rst:313
 msgid "[ ``Refresh list`` ]: refresh raster band list;"
-msgstr ""
+msgstr "[ ``Refresh list`` ]: оновити перелік растрів каналів;"
 
 #: ../../main_interface_window.rst:314
 msgid "[ ``Select all`` ]: select all raster bands;"
-msgstr ""
+msgstr "[ ``Select all`` ]: вибрати всі растри каналів;"
 
 #: ../../main_interface_window.rst:315
 msgid ""
 "[ ``Add rasters to set`` ]: add selected rasters to the band set; the band "
 "set is stored in the QGIS project."
 msgstr ""
+"[ ``Add rasters to set`` ]: додати вибрані растри до набору каналів; "
+"інформація про набір каналів зберігається в проекті QGIS."
 
 #: ../../main_interface_window.rst:320
 msgid "Band set definition"
-msgstr ""
+msgstr "Визначення набору каналів (Band set definition)"
 
 #: ../../main_interface_window.rst:322
 msgid "``Wavelength unit``: select the wavelength unit;"
-msgstr ""
+msgstr "``Wavelength unit``: визначити одиниці вимірювання довжини хвилі;"
 
 #: ../../main_interface_window.rst:328
 msgid "``Control bands``:"
@@ -680,27 +761,28 @@ msgstr ""
 
 #: ../../main_interface_window.rst:324
 msgid "[ :math:`\\uparrow` ]: move highlighted bands upward;"
-msgstr ""
+msgstr "[ :math:`\\uparrow` ]: перемістити вибрані канали вгору;"
 
 #: ../../main_interface_window.rst:325
 msgid "[ :math:`\\downarrow` ]: move highlighted bands downward;"
-msgstr ""
+msgstr "[ :math:`\\downarrow` ]: перемістити вибрані канали вниз;"
 
 #: ../../main_interface_window.rst:326
 msgid "[ ``Remove band`` ]: remove highlighted bands from the band set;"
-msgstr ""
+msgstr "[ ``Remove band`` ]: вилучити вибрані канали з набору каналів;"
 
 #: ../../main_interface_window.rst:327
 msgid "[ ``Clear all`` ]: clear all bands from band set;"
-msgstr ""
+msgstr "[ ``Clear all`` ]: очистити всі канали з набору каналів;"
 
 #: ../../main_interface_window.rst:328
 msgid "[ ``Import`` ]: import a previously saved band set from file;"
 msgstr ""
+"[ ``Import`` ]: імпортувати  з файлу попередньо збережений набір каналів;"
 
 #: ../../main_interface_window.rst:329
 msgid "[ ``Export`` ]: export the band set to a file."
-msgstr ""
+msgstr "[ ``Export`` ]: експортувати набір каналів до файлу."
 
 #: ../../main_interface_window.rst:330
 msgid ""
@@ -708,6 +790,9 @@ msgid ""
 "for several satellite sensors: Landsat 8 OLI, Landsat 7 ETM+, Landsat 4-5 "
 "TM, RapidEye, SPOT 4, SPOT 5, SPOT 6, Pleiades, QuickBird;"
 msgstr ""
+"``Quick wavelength settings``: оперативне визначення центральної довжини "
+"хвилі каналу для наступних супутників та сенсорів: Landsat 8 OLI, Landsat 7 "
+"ETM+, Landsat 4-5 TM, RapidEye, SPOT 4, SPOT 5, SPOT 6, Pleiades, QuickBird;"
 
 #: ../../main_interface_window.rst:332
 msgid ""
@@ -716,6 +801,10 @@ msgid ""
 "Of course, the :ref:`USGS_spec_library_tab` will not be useful, but the ROI "
 "collection and the classification process will still be working."
 msgstr ""
+"**Порада**: Хоча  для каналів рекомендовано визначати ``Center wavelength``, "
+"також є можливість призначення номера каналу замість довжини хвилі. В такому "
+"випадку :ref:`USGS_spec_library_tab` використовувати недоцільно, але збір "
+"ROI та класифікація працюватимуть."
 
 #: ../../main_interface_window.rst:338
 msgid "http://www.youtube.com/watch?v=FYaWcG0fX_0"
@@ -723,11 +812,11 @@ msgstr ""
 
 #: ../../main_interface_window.rst:343
 msgid "Settings tab"
-msgstr ""
+msgstr "Вкладка Налаштування (Settings)"
 
 #: ../../main_interface_window.rst:349
 msgid ":guilabel:`Settings`"
-msgstr ""
+msgstr ":guilabel:`Налаштування`"
 
 #: ../../main_interface_window.rst:351
 msgid ""
@@ -737,34 +826,45 @@ msgid ""
 "debugging utilities for the creation of a Log file (i.e. recording of plugin "
 "activities for reporting issues)."
 msgstr ""
+"Вкладка ``Settings`` дозволяє пристосовувати до потреб користувача необхідні "
+"імена полів навчального шейп-файлу та інші параметри, які є важливими для "
+"збору ROI та класифікації. Також вкаладка ``Settings`` містить інструменти "
+"пошуку вад для формування файлу журналу реєстрації (запису інформації про "
+"роботу модуля та проблеми, що виникли в процесі)."
 
 #: ../../main_interface_window.rst:357
 msgid "Field names of training shapefile"
-msgstr ""
+msgstr "Імена полів навчального шейп-файлу (Field names of training shapefile)"
 
 #: ../../main_interface_window.rst:359
 msgid ""
 "[ ``MC ID field`` ]: name of the Macroclass ID field (default is ``MC_ID``);"
 msgstr ""
+"[ ``Macroclass ID field`` ]: ім'я поля унікального ідентифакатора макрокласу "
+"(стандартно ``Macro_ID``);"
 
 #: ../../main_interface_window.rst:360
 msgid ""
 "[ ``MC Info field`` ]: name of the Information field (default is "
 "``MC_info``);"
-msgstr ""
+msgstr "[ ``MC Info field`` ]: ім'я поля інформації (стандартно `MC_info``);"
 
 #: ../../main_interface_window.rst:361
 msgid "[ ``C ID field`` ]: name of the ID field (default is ``C_ID``);"
 msgstr ""
+"[ ``C ID field`` ]: ім'я поля унікального ідентифакатора класу (стандартно "
+"``C_ID``);"
 
 #: ../../main_interface_window.rst:362
 msgid ""
 "[ ``C Info field`` ]: name of the Information field (default is ``C_info``);"
 msgstr ""
+"[ ``C Info field`` ]: ім'я поля унікального ідентифакатора класу "
+"(стандартно  ``C_info``);"
 
 #: ../../main_interface_window.rst:363
 msgid "[ ``Reset field names`` ]: reset field names to default."
-msgstr ""
+msgstr "[ ``Reset field names`` ]: повернути імена полів до стандартних."
 
 #: ../../main_interface_window.rst:365
 msgid ""
@@ -774,46 +874,60 @@ msgid ""
 "will be listed in the :ref:`training_shapefile` (see this `video <http://"
 "youtu.be/4V4Fh_MWgSA?t=2m53s>`_ )."
 msgstr ""
+"**Порада**: ці налаштування дозволяють використовувати шейп-файл з іменами "
+"полів, що відрізняються від стандартних, без його редагування. Важливо "
+"змінити імена полів відповідно до їх імен в шейп-файлі. Таким чином, "
+"завантажений до QGIS шейп-фал буде відображений в :ref:`training_shapefile` "
+"(дивіться `відео <http://youtu.be/4V4Fh_MWgSA?t=2m53s>`_ )."
 
 #: ../../main_interface_window.rst:370
 msgid "ROI style"
-msgstr ""
+msgstr "Стиль ROI (ROI style)"
 
 #: ../../main_interface_window.rst:372
 msgid ""
 "[ ``Change colour`` ]: change ROI colour; this configuration is stored in "
 "the QGIS registry;"
 msgstr ""
+"[ ``Change colour`` ]: змінити колір ROI; це налаштування зберігається в "
+"реєстрі QGIS;"
 
 #: ../../main_interface_window.rst:373
 msgid "[ ``Reset ROI style`` ]: reset ROI colour and transparency to default;"
 msgstr ""
+"[ ``Reset ROI style`` ]: повернути колір та прозорість ROI до стандартних;"
 
 #: ../../main_interface_window.rst:374
 msgid ""
 "[- ``Transparency`` -]: change ROI transparency; this configuration is "
 "stored in the QGIS registry."
 msgstr ""
+"[- ``Transparency`` -]: змінити прозорість ROI; це налаштування зберігається "
+"в реєстрі QGIS."
 
 #: ../../main_interface_window.rst:379
 msgid "Spectral signature"
-msgstr ""
+msgstr "Спектральна сигнатура (Spectral signature)"
 
 #: ../../main_interface_window.rst:381
 msgid ""
 "< ``Plot legend Max number of characters`` >: limit the text length of names "
 "in the spectral plot legend."
 msgstr ""
+"< ``Plot legend Max number of characters`` >: обмежити довжину тексту імен "
+"ROI в легенді графіка спектральних кривих."
 
 #: ../../main_interface_window.rst:386
 msgid "Classification process"
-msgstr ""
+msgstr "Процес класифікації (Classification process)"
 
 #: ../../main_interface_window.rst:388
 msgid ""
 "``Play sound when finished``: play a sound when the classification process "
 "is completed; this configuration is stored in the QGIS registry;"
 msgstr ""
+"``Play sound when finished``: повідомити звуковим сигналом про завершення "
+"процесу класифікації; це налаштування зберігається в реєстрі QGIS;"
 
 #: ../../main_interface_window.rst:389
 msgid ""
@@ -822,36 +936,48 @@ msgid ""
 "for each land cover class representing the `similarity` of each pixel to the "
 "class thereof); this configuration is stored in the QGIS registry."
 msgstr ""
+"``Save algorithm files``: додатково до результатів класифікації зберігати "
+"проміжні файли, розраховані класифікаційним алгоритмом (один файл .tif для "
+"кожного класу земного покриву, який демонструє  `подібність` кожного пікселя "
+"до нього); це налаштування зберігається в реєстрі QGIS."
 
 #: ../../main_interface_window.rst:394
 msgid "RAM"
-msgstr ""
+msgstr "Оперативна пам'ять (RAM)"
 
 #: ../../main_interface_window.rst:396
 msgid ""
 "< ``Available RAM (MB)`` >: set the available RAM (in MB) that will be used "
 "during the processes; this configuration is stored in the QGIS registry."
 msgstr ""
+"< ``Available RAM (MB)`` >: встановити об'єм доступної оперативної пам'яті "
+"(в Мб), що буде використовуватись під час роботи; це налаштування "
+"зберігається в реєстрі QGIS."
 
 #: ../../main_interface_window.rst:401
 msgid "Debug"
-msgstr ""
+msgstr "Пошук вад (Debug)"
 
 #: ../../main_interface_window.rst:403
 msgid ""
 "``Records events in a log file`` : start recording events in a Log file; "
 "this configuration is stored in the QGIS registry;"
 msgstr ""
+"``Records events in a log file`` : почати запис подій до файлу журналу "
+"реєстрації; це налаштування зберігається в реєстрі QGIS;"
 
 #: ../../main_interface_window.rst:404
 msgid ""
 "[ ``Export Log file`` ]: open a window for choosing where to save the Log "
 "file (i.e. a .txt file)."
 msgstr ""
+"[ ``Export Log file`` ]: відкриває діалогове вікне для вибору каталогу "
+"збереження файлу журналу реєстрації (файлу .txt)."
 
 #: ../../main_interface_window.rst:405
 msgid "[ ``Clear Log file content`` ]: clear the content of Log file."
 msgstr ""
+"[ ``Clear Log file content`` ]: очистити зміст файлу журналу реєстрації."
 
 #: ../../main_interface_window.rst:411
 msgid "http://www.youtube.com/watch?v=4V4Fh_MWgSA"
