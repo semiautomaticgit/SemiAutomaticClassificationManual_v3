@@ -1,113 +1,123 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Semi-Automatic Classification Plugin 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-27 23:33+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2014-12-10 22:26+0200\n"
+"Last-Translator: Daria Svidzinska <d.svidzinska@gmail.com>\n"
+"Language-Team: KNU OSGeo Research and Education Lab <lab.osgeo@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 1.7.1\n"
 
 #: ../../scatter_plot.rst:5
 msgid "Scatter Plot"
-msgstr ""
+msgstr "Діаграма розсіювання (Scatter Plot)"
 
 #: ../../scatter_plot.rst:11
 msgid ""
 "The ``Scatter plot`` window allows for the calculation of the ROI scatter "
 "plots, which are useful to assess ROI separability choosing between two "
-"bands. Pixel values for two raster bands are represented as points in the 2D"
-" space."
+"bands. Pixel values for two raster bands are represented as points in the "
+"2D space."
 msgstr ""
+"Вікно ``Scatter plot``відповідає за розрахунок діаграм розсіювання ROI, які "
+"корисні для оцінки відокремності ROI при виборі між двома каналами. "
+"Значення пікселів для двох растрів каналів відображаються як точки в "
+"двовимірному просторі."
 
 #: ../../scatter_plot.rst:17
 msgid ":guilabel:`Scatter Plot`"
-msgstr ""
+msgstr ":guilabel:`Діаграма розсіювання`"
 
 #: ../../scatter_plot.rst:22
 msgid "ROI List"
-msgstr ""
+msgstr "Перелік ROI (ROI List)"
 
 #: ../../scatter_plot.rst:29
 msgid "Table fields:"
-msgstr ""
+msgstr "Поля таблиці:"
 
 #: ../../scatter_plot.rst:25
 msgid "``S`` : checkbox field;"
-msgstr ""
+msgstr "``S`` : перемикач;"
 
 #: ../../scatter_plot.rst:26
 msgid "``MC ID`` : Macroclass ID;"
-msgstr ""
+msgstr "``MC ID`` : унікальний ідентифікатор макрокласу;"
 
 #: ../../scatter_plot.rst:27
 msgid "``MC Info`` : Macroclass Information;"
-msgstr ""
+msgstr "``MC Info`` : характеристика макрокласу;"
 
 #: ../../scatter_plot.rst:28
 msgid "``C ID`` : Class ID;"
-msgstr ""
+msgstr "``Class ID`` : унікальний ідентифікатор класу;"
 
 #: ../../scatter_plot.rst:29
 msgid "``C Info`` : Class Information;"
-msgstr ""
+msgstr "``C Info`` : характеристика класу;"
 
 #: ../../scatter_plot.rst:30
 msgid "``Color`` : color field; double click to select a color for the plot;"
-msgstr ""
+msgstr "``Color`` : колір; двічі клацніть для вибору кольору діаграми;"
 
 #: ../../scatter_plot.rst:31
 msgid "< ``Band X`` >: X band of the plot;"
-msgstr ""
+msgstr "< ``Band X`` >: канал X діаграми;"
 
 #: ../../scatter_plot.rst:32
 msgid "< ``Band Y`` >: Y band of the plot;"
-msgstr ""
+msgstr "< ``Band Y`` >: канал Y діаграми;"
 
 #: ../../scatter_plot.rst:33
 msgid ""
 "[ ``Calculate scatter plot`` ]: calculate the scatter plot for the ROI "
 "checked in the list (it can be time consuming)."
 msgstr ""
+"[ ``Calculate scatter plot`` ]: розрахувати діаграму розсіювання значень "
+"для ROI, увімкнених в переліку (процес може бути часовитратним)."
 
 #: ../../scatter_plot.rst:42
 msgid "Plot commands (from Matplotlib):"
-msgstr ""
+msgstr "Управління діаграмою (з Matplotlib):"
 
 #: ../../scatter_plot.rst:35
 msgid "|m_home|: Reset to original view;"
-msgstr ""
+msgstr "|m_home|: повернутись до початкового огляду;"
 
 #: ../../scatter_plot.rst:36
 msgid "|m_back|: Back to previous view;"
-msgstr ""
+msgstr "|m_back|: повернутись до попереднього огляду;"
 
 #: ../../scatter_plot.rst:37
 msgid "|m_forward|: Forward to next view;"
-msgstr ""
+msgstr "|m_forward|: перейти до наступного огляду;"
 
 #: ../../scatter_plot.rst:38
 msgid "|m_pan|: Pan axes with left mouse, zoom with right;"
 msgstr ""
+"|m_pan|: вибір ділянки вісей для відображення лівою кнопкою миші, зміна "
+"масштабу - правою;"
 
 #: ../../scatter_plot.rst:39
 msgid "|m_zoom|: Zoom to rectangle;"
-msgstr ""
+msgstr "|m_zoom|: збільшити до прямокутника;"
 
 #: ../../scatter_plot.rst:40
 msgid "|m_sub|: Unused;"
-msgstr ""
+msgstr "|m_sub|: невикористовувана команда;"
 
 #: ../../scatter_plot.rst:41
 msgid "|m_save|: Save plot to a figure (e.g. JPG file);"
-msgstr ""
+msgstr "|m_save|: зберегти діаграму до рисунку (файл JPG);"
 
 #: ../../scatter_plot.rst:42
 msgid "|m_edit|: Unused."
-msgstr ""
+msgstr "|m_edit|: Unused."
 
 #: ../../scatter_plot.rst:44
 msgid "|br|"
@@ -115,4 +125,4 @@ msgstr ""
 
 #: ../../scatter_plot.rst:46
 msgid "**Tip**: it is possible to move the legend with the mouse."
-msgstr ""
+msgstr "**Порада**: легенду можна посунути мишкою."
